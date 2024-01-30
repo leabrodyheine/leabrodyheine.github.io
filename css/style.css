@@ -798,7 +798,8 @@ html, body {
 }
 
 .section-courses {
-    padding: 60px 0;
+    padding-top: 60px; /* Keeps the original top padding */
+    padding-bottom: 100px;
     background: ##ffffff;
     text-align: center;
 }
