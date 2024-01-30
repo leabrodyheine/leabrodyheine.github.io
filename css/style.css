@@ -805,7 +805,7 @@ html, body {
 .course-item {
     margin-bottom: 30px;
     padding: 20px;
-    background: #fff;
+    background-color: #d8e2ee;
     border: 1px solid #eaeaea;
     text-align: center;
 }
