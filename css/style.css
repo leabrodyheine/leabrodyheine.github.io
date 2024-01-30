@@ -238,7 +238,6 @@ html, body {
 
 .site-section p {
     margin-bottom: 35px;
-    color: #7D7D7D
 }
 
 /* Section: Skills */
@@ -311,7 +310,7 @@ html, body {
 }
 
 .service p {
-    color: #000;
+    color: ##7D7D7D;
     margin-bottom: 0;
     text-align: center;
 }
