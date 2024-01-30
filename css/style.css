@@ -800,7 +800,7 @@ html, body {
 
 .section-courses {
     padding-top: 60px; /* Keeps the original top padding */
-    padding-bottom: 100px;
+    padding-bottom: 120px;
     background: ##ffffff;
     text-align: center;
 }
