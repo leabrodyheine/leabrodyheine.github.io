@@ -238,6 +238,7 @@ html, body {
 
 .site-section p {
     margin-bottom: 35px;
+    color: #7D7D7D
 }
 
 /* Section: Skills */
@@ -819,13 +820,13 @@ html, body {
     margin-bottom: 5px;
     font-size: 19px;
     font-weight: 600;
-    color: #555;
+    color: ##7D7D7D;
 }
 
 .course-item p {
     margin-bottom: 0;
     font-size: 17px;
-    color: #555;
+    color: ##7D7D7D;
 }
 
 
