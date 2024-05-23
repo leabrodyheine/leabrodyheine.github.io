@@ -313,7 +313,7 @@ html, body {
 .service p {
     color: ##7D7D7D;
     margin-bottom: 0;
-    text-align: center;
+    text-align: left;
 }
 
 .services-text {
