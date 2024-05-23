@@ -316,6 +316,10 @@ html, body {
     text-align: center;
 }
 
+.services-text {
+    text-align: left;
+}
+
 /* Section: Portfolio */
 .section-portfolio {
     padding-bottom: 120px;
