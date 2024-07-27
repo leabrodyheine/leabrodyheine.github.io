@@ -87,55 +87,92 @@ $(function () {
     });
 
     // tech stack bar
-    $(document).ready(function() {
-        var $techStackLogos = $('.tech-stack-logos');
-        var $logos = $techStackLogos.children('img');
-        var logoWidth = $logos.outerWidth(true);
-        var totalLogos = $logos.length;
-    
-        // Clone the logos for circular effect
-        $techStackLogos.append($logos.clone());
-        $techStackLogos.prepend($logos.clone());
-    
-        function updateScrollPosition() {
-            var maxScroll = logoWidth * totalLogos;
-            if (scrollPosition >= maxScroll) {
-                scrollPosition = 0;
-            } else if (scrollPosition < 0) {
-                scrollPosition = maxScroll;
-            }
-            $techStackLogos.css('transform', 'translateX(-' + scrollPosition + 'px)');
-        }
-    
-        function scrollLogos(direction) {
-            var maxScroll = logoWidth * totalLogos;
-            if (direction === 'left') {
-                scrollPosition -= logoWidth;
-            } else {
-                scrollPosition += logoWidth;
-            }
-            if (scrollPosition >= maxScroll) {
-                scrollPosition = 0;
-            } else if (scrollPosition < 0) {
-                scrollPosition = maxScroll - logoWidth;
-            }
-            $techStackLogos.css('transform', 'translateX(-' + scrollPosition + 'px)');
-        }
-    
-        var scrollPosition = logoWidth * totalLogos; // Start from the middle
-        $techStackLogos.css('transform', 'translateX(-' + scrollPosition + 'px)');
-    
-        $('.left-arrow').click(function() {
-            scrollLogos('left');
-        });
-    
-        $('.right-arrow').click(function() {
-            scrollLogos('right');
-        });
-    
-        // Auto-scroll functionality
-        setInterval(function() {
-            scrollLogos('right');
-        }, 3000); // Adjust the interval as needed
-    }); 
+    const scrollers = document.querySelectorAll(".scroller");
+
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        addAnimation();
+    }
+
+    function addAnimation() {
+        scrollers.forEach((scroller) => {
+            scroller.setAttribute('data-animated', true)
+    });
+
+    // $(document).ready(function() {
+    //     var $techStackLogos = $('.tech-stack-logos');
+    //     var $logos = $techStackLogos.children('img');
+    //     var logoWidth = $logos.outerWidth(true);
+    //     var totalLogos = $logos.length;
+
+    //     // Clone the logos for circular effect
+    //     $techStackLogos.append($logos.clone());
+    //     $techStackLogos.prepend($logos.clone());
+
+    //     var scrollPosition = logoWidth * totalLogos; // Start from the middle
+    //     $techStackLogos.css('transform', 'translateX(-' + scrollPosition + 'px)');
+
+    //     var scrollSpeed = 0.08; // Adjust this value for speed
+    //     var continuousScrollInterval;
+
+    //     function continuousScroll() {
+    //         scrollPosition += scrollSpeed;
+    //         var maxScroll = logoWidth * totalLogos;
+    //         if (scrollPosition >= maxScroll * 2) {
+    //             scrollPosition -= maxScroll;
+    //             $techStackLogos.css('transition', 'none');
+    //             $techStackLogos.css('transform', 'translateX(-' + scrollPosition + 'px)');
+    //             setTimeout(function() {
+    //                 $techStackLogos.css('transition', 'transform 0.5s linear');
+    //             }, 0);
+    //         } else {
+    //             $techStackLogos.css('transform', 'translateX(-' + scrollPosition + 'px)');
+    //         }
+    //         continuousScrollInterval = requestAnimationFrame(continuousScroll);
+    //     }
+
+    //     function startContinuousScroll() {
+    //         if (!continuousScrollInterval) {
+    //             continuousScrollInterval = requestAnimationFrame(continuousScroll);
+    //         }
+    //     }
+
+    //     function stopContinuousScroll() {
+    //         if (continuousScrollInterval) {
+    //             cancelAnimationFrame(continuousScrollInterval);
+    //             continuousScrollInterval = null;
+    //         }
+    //     }
+
+    //     function scrollLogos(direction) {
+    //         stopContinuousScroll();
+    //         var maxScroll = logoWidth * totalLogos;
+    //         if (direction === 'left') {
+    //             scrollPosition -= logoWidth * 3; // Scroll 3 logos at a time
+    //             if (scrollPosition < 0) {
+    //                 scrollPosition += maxScroll;
+    //             }
+    //         } else {
+    //             scrollPosition += logoWidth * 3; // Scroll 3 logos at a time
+    //             if (scrollPosition >= maxScroll * 2) {
+    //                 scrollPosition -= maxScroll;
+    //             }
+    //         }
+    //         $techStackLogos.css('transition', 'transform 0.5s ease-in-out');
+    //         $techStackLogos.css('transform', 'translateX(-' + scrollPosition + 'px)');
+    //         $techStackLogos.one('transitionend webkitTransitionEnd oTransitionEnd', function() {
+    //             $techStackLogos.css('transition', 'none');
+    //             startContinuousScroll();
+    //         });
+    //     }
+
+    //     $('.left-arrow').click(function() {
+    //         scrollLogos('left');
+    //     });
+
+    //     $('.right-arrow').click(function() {
+    //         scrollLogos('right');
+    //     });
+
+    //     startContinuousScroll();
+    // });    
 });
