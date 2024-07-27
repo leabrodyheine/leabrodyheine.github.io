@@ -776,7 +776,6 @@ html, body {
 .container {
     width: 80%; 
     margin: 0 auto;
-   
 }
 
 .navbar-collapse {
@@ -802,10 +801,11 @@ html, body {
     width: 100% !important;
 }
 
+/* Courses */
 .section-courses {
     padding-top: 60px; /* Keeps the original top padding */
     padding-bottom: 120px;
-    background: ##ffffff;
+    background: #ffffff;
     text-align: center;
 }
 
@@ -825,13 +825,64 @@ html, body {
     margin-bottom: 5px;
     font-size: 18px;
     font-weight: 600;
-    color: ##7D7D7D;
+    color: #7D7D7D;
 }
 
 .course-item p {
     margin-bottom: 0;
     font-size: 16px;
-    color: ##7D7D7D;
+    color: #7D7D7D;
 }
 
+/* Tech Stack Bar */
+.tech-stack-section {
+    text-align: center;
+    margin: 20px 0;
+}
 
+.tech-stack-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+}
+
+.tech-stack-logos-container {
+    overflow: hidden;
+    width: 80%; /* Adjust the width as needed */
+}
+
+.tech-stack-logos {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.tech-stack-logos img {
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+}
+
+.arrow {
+    cursor: pointer;
+    font-size: 2em;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: 10px;
+}
+
+.horizontal-scroll {
+    flex-wrap: no-wrap;
+    overflow-x: auto;
+  }

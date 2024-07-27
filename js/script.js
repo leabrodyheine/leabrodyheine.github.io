@@ -1,17 +1,17 @@
-$(function() {
+$(function () {
 
-    $('.navbar-toggle').click(function() {
+    $('.navbar-toggle').click(function () {
         $(this).toggleClass('act');
-            if($(this).hasClass('act')) {
-                $('.main-menu').addClass('act');
-            }
-            else {
-                $('.main-menu').removeClass('act');
-            }
+        if ($(this).hasClass('act')) {
+            $('.main-menu').addClass('act');
+        }
+        else {
+            $('.main-menu').removeClass('act');
+        }
     });
 
     //jQuery for page scrolling feature - requires jQuery Easing plugin
-    $(document).on('click', '.page-scroll a', function(event) {
+    $(document).on('click', '.page-scroll a', function (event) {
         var $anchor = $(this);
         $('html, body').stop().animate({
             scrollTop: $($anchor.attr('href')).offset().top
@@ -25,15 +25,15 @@ $(function() {
         offset: 10
     });
 
-	/* Progress bar */
+    /* Progress bar */
     var $section = $('.section-skills');
     function loadDaBars() {
-	    $('.progress .progress-bar').progressbar({
-	        transition_delay: 500
-	    });
+        $('.progress .progress-bar').progressbar({
+            transition_delay: 500
+        });
     }
-    
-    $(document).bind('scroll', function(ev) {
+
+    $(document).bind('scroll', function (ev) {
         var scrollOffset = $(document).scrollTop();
         var containerOffset = $section.offset().top - window.innerHeight;
         if (scrollOffset > containerOffset) {
@@ -44,12 +44,12 @@ $(function() {
     });
 
     /* Counters  */
-    if ($(".section-counters .start").length>0) {
-        $(".section-counters .start").each(function() {
+    if ($(".section-counters .start").length > 0) {
+        $(".section-counters .start").each(function () {
             var stat_item = $(this),
-            offset = stat_item.offset().top;
-            $(window).scroll(function() {
-                if($(window).scrollTop() > (offset - 1000) && !(stat_item.hasClass('counting'))) {
+                offset = stat_item.offset().top;
+            $(window).scroll(function () {
+                if ($(window).scrollTop() > (offset - 1000) && !(stat_item.hasClass('counting'))) {
                     stat_item.addClass('counting');
                     stat_item.countTo();
                 }
@@ -57,19 +57,19 @@ $(function() {
         });
     };
 
-	// another custom callback for counting to infinity
-	$('#infinity').data('countToOptions', {
-		onComplete: function (value) {
-		  count.call(this, {
-		    from: value,
-		    to: value + 1
-		  });
-		}
-	});
+    // another custom callback for counting to infinity
+    $('#infinity').data('countToOptions', {
+        onComplete: function (value) {
+            count.call(this, {
+                from: value,
+                to: value + 1
+            });
+        }
+    });
 
-	$('#infinity').each(count);
+    $('#infinity').each(count);
 
-	function count(options) {
+    function count(options) {
         var $this = $(this);
         options = $.extend({}, options || {}, $this.data('countToOptions') || {});
         $this.countTo(options);
@@ -77,13 +77,65 @@ $(function() {
 
     // Navigation overlay
     var s = skrollr.init({
-            forceHeight: false,
-            smoothScrolling: false,
-            mobileDeceleration: 0.004,
-            mobileCheck: function() {
-                //hack - forces mobile version to be off
-                return false;
-            }
+        forceHeight: false,
+        smoothScrolling: false,
+        mobileDeceleration: 0.004,
+        mobileCheck: function () {
+            //hack - forces mobile version to be off
+            return false;
+        }
     });
+
+    // tech stack bar
+    $(document).ready(function() {
+        var $techStackLogos = $('.tech-stack-logos');
+        var $logos = $techStackLogos.children('img');
+        var logoWidth = $logos.outerWidth(true);
+        var totalLogos = $logos.length;
     
+        // Clone the logos for circular effect
+        $techStackLogos.append($logos.clone());
+        $techStackLogos.prepend($logos.clone());
+    
+        function updateScrollPosition() {
+            var maxScroll = logoWidth * totalLogos;
+            if (scrollPosition >= maxScroll) {
+                scrollPosition = 0;
+            } else if (scrollPosition < 0) {
+                scrollPosition = maxScroll;
+            }
+            $techStackLogos.css('transform', 'translateX(-' + scrollPosition + 'px)');
+        }
+    
+        function scrollLogos(direction) {
+            var maxScroll = logoWidth * totalLogos;
+            if (direction === 'left') {
+                scrollPosition -= logoWidth;
+            } else {
+                scrollPosition += logoWidth;
+            }
+            if (scrollPosition >= maxScroll) {
+                scrollPosition = 0;
+            } else if (scrollPosition < 0) {
+                scrollPosition = maxScroll - logoWidth;
+            }
+            $techStackLogos.css('transform', 'translateX(-' + scrollPosition + 'px)');
+        }
+    
+        var scrollPosition = logoWidth * totalLogos; // Start from the middle
+        $techStackLogos.css('transform', 'translateX(-' + scrollPosition + 'px)');
+    
+        $('.left-arrow').click(function() {
+            scrollLogos('left');
+        });
+    
+        $('.right-arrow').click(function() {
+            scrollLogos('right');
+        });
+    
+        // Auto-scroll functionality
+        setInterval(function() {
+            scrollLogos('right');
+        }, 3000); // Adjust the interval as needed
+    }); 
 });
