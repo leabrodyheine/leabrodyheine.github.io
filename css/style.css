@@ -967,13 +967,13 @@ body {
     overflow: hidden;
     -webkit-mask: linear-gradient(90deg,
             transparent,
-            white 20%,
-            white 80%,
+            white 15%,
+            white 85%,
             transparent);
     mask: linear-gradient(90deg,
             transparent,
-            white 20%,
-            white 80%,
+            white 15%,
+            white 85%,
             transparent);
     flex-wrap: nowrap;
 }
@@ -981,12 +981,13 @@ body {
 
 .tech-stack-logos {
     display: flex;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.8s ease-in-out;
     gap: 0.5rem;
     padding-block: 0.6rem;
     /* flex-wrap: wrap; */
-    animation: scroll var(--_animation-duration, 40s) var(--_animation-direction, forwards) linear infinite;
+    animation: scroll 80s linear infinite;
     width: fit-content;
+    scroll-behavior: smooth;
 }
 
 .scroller[data-direction="right"]{

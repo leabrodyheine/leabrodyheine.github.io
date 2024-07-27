@@ -108,6 +108,39 @@ $(function () {
         });
     }
 
+    $(document).ready(function () {
+        var $techStackLogos = $('.tech-stack-logos');
+        var $logos = $techStackLogos.children('img');
+        var logoWidth = $logos.outerWidth(true);
+        var totalLogos = $logos.length;
+
+        var scrollPosition = 0; // Start from the beginning
+
+        function scrollLogos(direction) {
+            var maxScroll = logoWidth * (totalLogos - 1);
+            if (direction === 'left') {
+                scrollPosition -= logoWidth * 2; // Scroll 2 logos at a time
+                if (scrollPosition < 0) {
+                    scrollPosition = 0; // Stop at the beginning
+                }
+            } else {
+                scrollPosition += logoWidth * 2; // Scroll 2 logos at a time
+                if (scrollPosition >= maxScroll) {
+                    scrollPosition = maxScroll; // Stop at the end
+                }
+            }
+            $techStackLogos.css('transition', 'transform 0.5s ease-in-out');
+            $techStackLogos.css('transform', 'translateX(-' + scrollPosition + 'px)');
+        }
+
+        $('.left-arrow').click(function () {
+            scrollLogos('left');
+        });
+
+        $('.right-arrow').click(function () {
+            scrollLogos('right');
+        });
+    });
 });
 // $(document).ready(function() {
 //     var $techStackLogos = $('.tech-stack-logos');
