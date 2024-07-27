@@ -95,8 +95,11 @@ $(function () {
 
     function addAnimation() {
         scrollers.forEach((scroller) => {
-            scroller.setAttribute('data-animated', true)
-    });
+            scroller.setAttribute('data-animated', true);
+
+            const scrollerInner = scroller.querySelector(".tech-stack-logos");
+            const scrollerContent = scrollerInner.children;
+        });
 
     // $(document).ready(function() {
     //     var $techStackLogos = $('.tech-stack-logos');

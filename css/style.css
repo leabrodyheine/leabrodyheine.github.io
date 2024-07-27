@@ -963,7 +963,7 @@ body {
 
 .scroller {
     max-width: 99%;
-    border: 5px solid lime;
+    /* border: 5px solid lime; */
     overflow: hidden;
     -webkit-mask: linear-gradient(90deg,
             transparent,
@@ -985,7 +985,8 @@ body {
     gap: 0.5rem;
     padding-block: 0.6rem;
     /* flex-wrap: wrap; */
-    animation: scroll 30s linear infinite;
+    animation: scroll 35s linear infinite;
+    width: fit-content;
 }
 
 .tech-stack-logos img {
@@ -1013,6 +1014,6 @@ body {
 
 @keyframes scroll {
     to {
-        transform: translate(100%)
+        transform: translate(50%)
     }
 }
