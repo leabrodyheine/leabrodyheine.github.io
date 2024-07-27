@@ -107,6 +107,7 @@ $(function () {
             });
         });
     }
+
 });
 // $(document).ready(function() {
 //     var $techStackLogos = $('.tech-stack-logos');
