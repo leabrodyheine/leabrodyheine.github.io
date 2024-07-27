@@ -985,8 +985,16 @@ body {
     gap: 0.5rem;
     padding-block: 0.6rem;
     /* flex-wrap: wrap; */
-    animation: scroll 35s linear infinite;
+    animation: scroll var(--_animation-duration, 40s) var(--_animation-direction, forwards) linear infinite;
     width: fit-content;
+}
+
+.scroller[data-direction="right"]{
+    --_animation-direction: reverse;
+}
+
+.scroller[data-direction="left"]{
+    --_animation-direction: forwards;
 }
 
 .tech-stack-logos img {
@@ -1014,6 +1022,6 @@ body {
 
 @keyframes scroll {
     to {
-        transform: translate(50%)
+        transform: translate(-50%)
     }
 }
