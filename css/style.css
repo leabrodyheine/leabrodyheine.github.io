@@ -272,8 +272,10 @@ body {
 /* Section: Services 
 ================================================== */
 .service {
-    border-radius: 15px; /* Rounded corners */
-    overflow: hidden; /* Ensures that child elements do not overflow the rounded corners */
+    border-radius: 15px;
+    overflow: hidden;
+    padding-bottom: 20px;
+    height: auto;
 }
 
 .section-services {
@@ -341,6 +343,8 @@ body {
     height: auto;
     display: block;
     margin: 0 auto 20px;
+    border-radius: 0;  
+    object-fit: contain;
 }
 
 /* Section: Portfolio */
