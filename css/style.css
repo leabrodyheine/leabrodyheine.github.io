@@ -775,7 +775,8 @@ a:not(.nav-link),
     border: none;
 }
 
-/* Navigation Links Style */
+/* Navigation Links Style 
+================================================== */
 .navbar-nav>li>a {
     padding: 5px 0;
     font-weight: 600;
@@ -815,10 +816,14 @@ a:not(.nav-link),
 }
 
 /* Navigation styling */
-.navbar, .site-header {
-    background-color: rgba(255, 255, 255, 0.95); /* Slightly transparent white to blend with your existing colors */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Soft shadow under the navbar */
-} 
+.navbar,
+.site-header {
+    background-color: rgba(255, 255, 255, 0.95);
+    /* Slightly transparent white to blend with your existing colors */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    /* Soft shadow under the navbar */
+}
+
 /* here */
 
 /* Reset default margins and padding */
@@ -912,7 +917,8 @@ body {
     width: 100% !important;
 }
 
-/* Courses */
+/* Courses
+================================================== */
 .section-courses {
     padding-top: 60px;
     /* Keeps the original top padding */
@@ -921,26 +927,38 @@ body {
     text-align: center;
 }
 
+.section-courses .container {
+    max-width: 1200px;
+    /* Limit the maximum width of the content */
+    margin: 0 auto;
+    /* Center the container */
+}
+
 .course-item {
-    margin: 0 auto 30px;
-    /* Auto margins for horizontal centering */
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px;
     padding: 20px;
     background-color: #d8e2ee;
-    /* Your chosen item color */
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-    /* Subtle shadow for depth */
-    transition: transform 0.3s ease;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
 }
+
 
 .course-item:hover {
     transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .course-item h4 {
     margin-bottom: 5px;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
     color: #7D7D7D;
+    text-align: center;
 }
 
 .course-item p {
@@ -949,7 +967,8 @@ body {
     color: #7D7D7D;
 }
 
-/* Tech Stack Bar */
+/* Tech Stack Bar
+================================================== */
 .tech-stack-section {
     text-align: center;
     margin: 20px 0;
