@@ -269,7 +269,13 @@ body {
     background-color: #7D7D7D;
 }
 
-/* Section: Services */
+/* Section: Services 
+================================================== */
+.service {
+    border-radius: 15px; /* Rounded corners */
+    overflow: hidden; /* Ensures that child elements do not overflow the rounded corners */
+}
+
 .section-services {
     position: relative;
     padding-top: 200px;
@@ -308,6 +314,7 @@ body {
     background-color: #fff;
     box-shadow: 0px 0px 40px 8px rgba(0, 0, 0, 0.2);
     z-index: 1;
+    border-radius: 15px;
 }
 
 .service h4 {
