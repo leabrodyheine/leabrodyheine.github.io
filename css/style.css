@@ -321,6 +321,12 @@ body {
     z-index: 0;
 }
 
+/* Left-align bullet points in the service section */
+.section-services .service ul {
+    text-align: left;
+    padding-left: 20px;
+}
+
 .section-services .container {
     padding: 120px 100px;
     position: relative;
@@ -330,7 +336,7 @@ body {
 }
 
 .service h4 {
-    color: ##7D7D7D;
+    color: #7D7D7D;
     margin: 25px 0;
     font-size: 24px;
     font-weight: 700;
@@ -349,10 +355,10 @@ body {
 
 /* Specific styles for service icons */
 .section-services .service img {
-    width: 50px;  
-    height: auto; 
+    width: 50px;
+    height: auto;
     display: block;
-    margin: 0 auto 20px; 
+    margin: 0 auto 20px;
 }
 
 /* Section: Portfolio */
@@ -998,11 +1004,11 @@ body {
     scroll-behavior: smooth;
 }
 
-.scroller[data-direction="right"]{
+.scroller[data-direction="right"] {
     --_animation-direction: reverse;
 }
 
-.scroller[data-direction="left"]{
+.scroller[data-direction="left"] {
     --_animation-direction: forwards;
 }
 
