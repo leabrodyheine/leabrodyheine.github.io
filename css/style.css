@@ -338,7 +338,7 @@ body {
 }
 
 .service p {
-    color: ##7D7D7D;
+    color: #7D7D7D;
     margin-bottom: 0;
     text-align: left;
 }
@@ -347,12 +347,14 @@ body {
     text-align: left;
 }
 
-.services img {
-    max-width: 10px; /* Adjust the size as needed */
-    height: auto; /* Keeps the aspect ratio of the image */
+/* Specific styles for service icons */
+.section-services .service img {
+    width: 50px;  
+    height: auto; 
     display: block;
-    margin: 0 auto 20px; /* Centers the image and adds space below */
+    margin: 0 auto 20px; 
 }
+
 /* Section: Portfolio */
 .section-portfolio {
     padding-bottom: 120px;
