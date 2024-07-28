@@ -38,7 +38,6 @@ $(function () {
         var containerOffset = $section.offset().top - window.innerHeight;
         if (scrollOffset > containerOffset) {
             loadDaBars();
-            // unbind event not to load scrolsl again
             $(document).unbind('scroll');
         }
     });
