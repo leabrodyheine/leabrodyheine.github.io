@@ -343,7 +343,7 @@ body {
     height: auto;
     display: block;
     margin: 0 auto 20px;
-    border-radius: 0;  
+    border-radius: 0;
     object-fit: contain;
 }
 
@@ -381,6 +381,11 @@ body {
 
 .portfolio-item:hover:before {
     background-color: rgba(33, 33, 33, 0.6);
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 .portfolio-item-info {
@@ -613,45 +618,36 @@ h6 {
 /* LINKS AND BUTTONS */
 a {
     color: #d8e2ee;
-    /* Muted Blue for links */
 }
 
 a:hover,
 a:focus {
     color: #7D7D7D;
-    /* Dark Grey for hover/focus state */
 }
 
 .btn {
     background-color: #d8e2ee;
-    /* Muted Blue for button background */
     color: #7D7D7D;
-    /* Soft Cream for button text */
 }
 
 .btn:hover {
     background-color: #7D7D7D;
-    /* Dark Grey for button hover state */
     color: #E5E5E5;
-    /* Light Grey for button text on hover */
 }
 
 /* NAVIGATION */
 nav {
     background-color: #d8e2ee;
-    /* Light Grey for the navigation bar */
 }
 
 /* FOOTER */
 footer {
     background-color: #E5E5E5;
-    /* Light Grey for the footer */
 }
 
 /* ADDITIONAL ELEMENTS */
 .section-background {
     background-color: #d8e2ee;
-    /* Muted Blue for section background */
 }
 
 /* BASE COLORS AND GENERAL STYLES */
@@ -805,7 +801,6 @@ a:not(.nav-link),
 .nav>li.active>a {
     background-color: transparent;
     border-bottom: 1.3px solid #7D7D7D;
-    /* Dark Grey for border on hover */
 }
 
 /* Center and Adjust Spacing of Navigation Links */
@@ -842,9 +837,7 @@ body {
 
 .modal-dialog {
     width: 70%;
-    /* This will make the modal 2.5 times wider */
     margin: 30px auto;
-    /* This will help keep it centered */
 }
 
 
@@ -917,7 +910,6 @@ body {
 ================================================== */
 .section-courses {
     padding-top: 60px;
-    /* Keeps the original top padding */
     padding-bottom: 120px;
     background: #ffffff;
     text-align: center;
@@ -925,9 +917,7 @@ body {
 
 .section-courses .container {
     max-width: 1200px;
-    /* Limit the maximum width of the content */
     margin: 0 auto;
-    /* Center the container */
 }
 
 .course-item {
@@ -983,7 +973,6 @@ body {
 
 .scroller {
     max-width: 99%;
-    /* border: 5px solid lime; */
     overflow: hidden;
     -webkit-mask: linear-gradient(90deg,
             transparent,
@@ -1004,7 +993,6 @@ body {
     transition: transform 0.8s ease-in-out;
     gap: 0.5rem;
     padding-block: 0.6rem;
-    /* flex-wrap: wrap; */
     animation: scroll 80s linear infinite;
     width: fit-content;
     scroll-behavior: smooth;
