@@ -1,13 +1,4 @@
-/*
- * Theme Name: 
- * Theme URI: 
- * Author: Milan Savov
- * Author URI/Mail: milan.savov@gmail.com
- * Version: 1.0
- * */
-
-/* FONT
-================================================== */
+/*================================================== */
 @font-face {
     font-family: 'fontello';
     src: url('../fonts/fontello.eot?37927580');
@@ -38,37 +29,6 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-
-.icon-twitter:before {
-    content: '\f099';
-}
-
-/* '' */
-.icon-facebook:before {
-    content: '\f09a';
-}
-
-/* '' */
-.icon-gplus:before {
-    content: '\f0d5';
-}
-
-/* '' */
-.icon-linkedin:before {
-    content: '\f0e1';
-}
-
-/* '' */
-.icon-linkedin:before {
-    content: '\f0e1';
-}
-
-/* '' */
-.icon-up:before {
-    content: '\f176';
-}
-
-/* '' */
 
 /* CUSTOM RESETS
 ================================================== */
@@ -104,6 +64,7 @@ h4 {
     -webkit-transition: box-shadow 0.25s ease-in-out;
     -o-transition: box-shadow 0.25s ease-in-out;
     -ms-transition: box-shadow 0.25s ease-in-out;
+    transition: box-shadow 0.3s ease;
 }
 
 .btn-fill {
@@ -120,6 +81,7 @@ h4 {
 .btn-fill:hover,
 .btn-fill:focus {
     color: #fff;
+    box-shadow: 0px 10px 18px 0px rgba(0, 0, 0, 0.15);
 }
 
 .btn:hover,
@@ -130,13 +92,17 @@ h4 {
 /* Input fields */
 .form-control {
     padding-left: 10px;
-    border: 0;
     border-bottom: 1px solid #212121;
     border-radius: 0;
     background-color: transparent;
     box-shadow: none;
     outline: 0 none transparent;
     -webkit-appearance: none;
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    /* Light grey border */
+    background-color: #fff;
+    /* White background */
 }
 
 textarea {
@@ -153,6 +119,15 @@ textarea {
 ::-moz-placeholder,
 ::-webkit-input-placeholder {
     font-size: 16px;
+}
+
+/* Apply rounded corners to all buttons, input fields, and images */
+.btn,
+.form-control,
+img,
+.service img {
+    border-radius: 12px;
+    /* Adjust based on your preference for roundness */
 }
 
 /* LAYOUT
@@ -439,6 +414,13 @@ body {
 
 .section-portfolio .btn {
     margin-top: 10px;
+}
+
+.service,
+.portfolio-item {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
 }
 
 /* Modal */
@@ -831,6 +813,13 @@ a:not(.nav-link),
 .navbar-nav>li {
     margin: 0 23px;
 }
+
+/* Navigation styling */
+.navbar, .site-header {
+    background-color: rgba(255, 255, 255, 0.95); /* Slightly transparent white to blend with your existing colors */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Soft shadow under the navbar */
+} 
+/* here */
 
 /* Reset default margins and padding */
 html,

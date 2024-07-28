@@ -157,6 +157,12 @@
 	    margin-top: 0;
 	}
 
+	@media (max-width: 768px) {
+		.btn, .form-control {
+			border-radius: 8px; /* Smaller radius on mobile for better fit */
+		}
+	}
+	
 	/* HEADER
 	================================================== */
 	.site-logo {
