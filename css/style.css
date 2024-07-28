@@ -706,7 +706,6 @@ h6 {
 .btn-linkedin,
 .btn-github {
     margin: 0 40px;
-    /* I've doubled the spacing here */
 }
 
 /* Responsive design for smaller screens */
@@ -715,7 +714,6 @@ h6 {
     .btn-linkedin,
     .btn-github {
         margin: 10px 0;
-        /* Stacks the buttons vertically on smaller screens with spacing between them */
         display: block;
         width: auto;
         text-align: center;
@@ -737,13 +735,9 @@ h6 {
 /* Style for navigation links within the header */
 .site-navigation .navbar-nav>li>a {
     padding: 14px 20px;
-    /* Adjust padding as needed */
     border-radius: 0;
-    /* Reset border-radius to 0 */
     border: none;
-    /* Remove the border */
     transition: background-color 0.25s ease-in-out;
-    /* Adjust transition as needed */
 }
 
 /* Style for navigation links on hover and active */
@@ -756,11 +750,8 @@ h6 {
 a,
 .btn {
     border-radius: 8px;
-    /* Adjust the pixel value to your desired roundness */
     border: 2px solid #7D7D7D;
-    /* Dark Grey border */
     transition: background-color 0.25s ease-in-out;
-    /* Adjust transition as needed */
 }
 
 .navbar .nav-link,
@@ -778,7 +769,6 @@ a:not(.nav-link),
 /* Apply the style to the navigation toggle button */
 .navbar-toggle {
     background-color: #d8e2ee;
-    /* Muted Blue for toggle button */
     border: none;
 }
 
@@ -826,12 +816,9 @@ a:not(.nav-link),
 .navbar,
 .site-header {
     background-color: rgba(255, 255, 255, 0.95);
-    /* Slightly transparent white to blend with your existing colors */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    /* Soft shadow under the navbar */
 }
 
-/* here */
 
 /* Reset default margins and padding */
 html,
@@ -855,9 +842,7 @@ body {
 
 #about .col-md-6.col-md-offset-3 {
     width: 100%;
-    /* Adjust the percentage to your preference. 100% means it will take full width of its parent container. */
     margin: 0 auto;
-    /* This will center the div if it's less than 100% width */
 }
 
 #about .col-md-6.col-md-offset-3 p.intro-about-me-text {
@@ -868,14 +853,10 @@ body {
 
 #about .col-md-6.col-md-offset-3 p {
     font-size: 20px;
-    /* Adjust as per your preference */
 }
 
 #about {
-    border-top: 2px solid #7D7D7D;
-    /* Color taken from your navbar */
-    padding-top: 50px;
-    /* Space above the separator */
+    padding-top: 20px;
 }
 
 .col-sm-4 p.what-i-do-text {
@@ -979,6 +960,8 @@ body {
 .tech-stack-section {
     text-align: center;
     margin: 20px 0;
+    border-bottom: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .tech-stack-container {
