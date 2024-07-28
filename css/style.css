@@ -370,11 +370,13 @@ body {
     top: 0;
     left: 0;
     z-index: 1;
+    border-radius: 15px;
     transition: background-color 0.25s ease-in-out;
     -moz-transition: background-color 0.25s ease-in-out;
     -webkit-transition: background-color 0.25s ease-in-out;
     -o-transition: background-color 0.25s ease-in-out;
     -ms-transition: background-color 0.25s ease-in-out;
+
 }
 
 .portfolio-item:hover:before {
@@ -421,6 +423,7 @@ body {
 .portfolio-item-info a:hover {
     color: #212121;
     background-color: #fff;
+    border-radius: 15px;
 }
 
 .section-portfolio .btn {
@@ -432,6 +435,7 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     margin-bottom: 20px;
+    border-radius: 15px;
 }
 
 /* Modal */
