@@ -347,6 +347,12 @@ body {
     text-align: left;
 }
 
+.services img {
+    max-width: 10px; /* Adjust the size as needed */
+    height: auto; /* Keeps the aspect ratio of the image */
+    display: block;
+    margin: 0 auto 20px; /* Centers the image and adds space below */
+}
 /* Section: Portfolio */
 .section-portfolio {
     padding-bottom: 120px;
