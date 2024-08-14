@@ -106,13 +106,4 @@ $(function () {
         });
     }
 
-    // Add the arrow functionality here
-    document.querySelector('.left-arrow').addEventListener('click', () => {
-        document.querySelector('.tech-stack-logos').scrollBy({ left: -100, behavior: 'smooth' });
-    });
-
-    document.querySelector('.right-arrow').addEventListener('click', () => {
-        document.querySelector('.tech-stack-logos').scrollBy({ left: 100, behavior: 'smooth' });
-    });
-    
 });
