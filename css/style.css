@@ -866,8 +866,8 @@ p.intro-about-me-text {
 }
 
 #about {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 30px;
+    padding-bottom: 50px;
 }
 
 .img-lines-about {
@@ -875,7 +875,7 @@ p.intro-about-me-text {
 }
 
 .about-title {
-    padding-top: 20px;
+    padding-top: 30px;
     padding-bottom: 0px;
     margin-bottom: 20px;
 }
@@ -977,7 +977,8 @@ p.intro-about-me-text {
 ================================================== */
 .tech-stack-section {
     text-align: center;
-    margin: 20px 0;
+    margin: 0px 0;
+    padding: none;
     border-bottom: none;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
@@ -991,6 +992,12 @@ p.intro-about-me-text {
     width: 100%;
 }
 
+.techstack-title {
+    padding-top: 15px;
+    padding-bottom: 10px;
+    margin-top: 0px;
+    font-size: 20px;
+}
 .scroller {
     max-width: 99%;
     overflow: hidden;
