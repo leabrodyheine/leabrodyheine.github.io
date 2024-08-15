@@ -700,27 +700,41 @@ h6 {
     color: #7D7D7D;
 }
 
-/* Button positioning and spacing */
+/* Contact Button positioning and spacing */
 .btn-container {
     display: flex;
     justify-content: center;
     align-items: center;
+    outline: none;
+    border: none;
 }
 
-.btn-linkedin,
-.btn-github {
-    margin: 0 40px;
+.btn-container a {
+    border: none;
+    outline: none;
 }
 
-/* Responsive design for smaller screens */
+.btn-container a img {
+    border: none;
+    outline: none;
+    transition: transform 0.3s ease;
+}
+
+.btn-container a img:hover {
+    transform: scale(1.1);
+}
+
 @media (max-width: 768px) {
+    .btn-container {
+        flex-direction: row;
+        border: none;
+        outline: none;
+    }
 
-    .btn-linkedin,
-    .btn-github {
+    .btn-container a img {
         margin: 10px 0;
-        display: block;
-        width: auto;
-        text-align: center;
+        border: none;
+        outline: none
     }
 }
 
