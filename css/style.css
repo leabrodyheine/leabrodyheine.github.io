@@ -855,7 +855,6 @@ body {
     text-align: left;
     padding-bottom: 20px;
     padding-top: 0px;
-
 }
 
 #about .col-md-6.col-md-offset-3 p {
@@ -865,6 +864,10 @@ body {
 #about {
     padding-top: 20px;
     padding-bottom: 20px;
+}
+
+.img-lines-about {
+    margin-bottom: 0px;
 }
 
 .about-title {
