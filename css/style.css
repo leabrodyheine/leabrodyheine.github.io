@@ -201,7 +201,8 @@ body {
 
 .job-title {
     font-size: 24px;
-    margin-bottom: 30px;
+    margin-top: 20px;
+    margin-bottom: 10px;
     line-height: 1;
 }
 
@@ -209,6 +210,7 @@ body {
     font-size: 18px;
     margin-bottom: 20px;
     line-height: 0.95;
+    margin-top: 0px;
 }
 
 .hero img {
@@ -852,7 +854,7 @@ body {
 
 #about .col-md-6.col-md-offset-3 p.intro-about-me-text {
     text-align: left;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
     padding-top: 0px;
 }
 p.intro-about-me-text {
@@ -865,8 +867,8 @@ p.intro-about-me-text {
 }
 
 #about {
-    padding-top: 30px;
-    padding-bottom: 50px;
+    padding-top: 50px;
+    padding-bottom: 60px;
 }
 
 .img-lines-about {
