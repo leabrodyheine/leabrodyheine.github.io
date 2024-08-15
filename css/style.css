@@ -200,13 +200,13 @@ body {
 }
 
 .job-title {
-    font-size: 23px;
+    font-size: 24px;
     margin-bottom: 30px;
     line-height: 1;
 }
 
 .degree-title {
-    font-size: 15px;
+    font-size: 18px;
     margin-bottom: 20px;
     line-height: 0.95;
 }
@@ -678,10 +678,10 @@ h6 {
 /* Contact Button positioning and spacing */
 .btn-contact-container {
     display: flex;
-    justify-content: space-between; /* Evenly space out the buttons */
+    justify-content: space-between;
     align-items: center;
-    width: 60%; /* Set the width to 60% */
-    margin: 0 auto; /* Center the div within the page */
+    width: 60%;
+    margin: 0 auto;
 }
 
 .btn-linkedin,
@@ -789,11 +789,9 @@ a:not(.nav-link),
     padding: 5px 0;
     font-weight: 600;
     color: #7D7D7D;
-    /* Dark Grey for links */
     text-transform: uppercase;
     border-bottom: 2px solid transparent;
     border-top: none;
-    /* Remove the top border */
     transition: border-color 0.25s ease-in-out;
     -moz-transition: border-color 0.25s ease-in-out;
     -webkit-transition: border-color 0.25s ease-in-out;
@@ -855,8 +853,9 @@ body {
 
 #about .col-md-6.col-md-offset-3 p.intro-about-me-text {
     text-align: left;
-    text-indent: 80px;
-    padding-bottom: 12px;
+    padding-bottom: 20px;
+    padding-top: 0px;
+
 }
 
 #about .col-md-6.col-md-offset-3 p {
@@ -865,6 +864,13 @@ body {
 
 #about {
     padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.about-title {
+    padding-top: 20px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
 }
 
 .col-sm-4 p.what-i-do-text {
