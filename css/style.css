@@ -200,9 +200,15 @@ body {
 }
 
 .job-title {
-    font-size: 22px;
+    font-size: 23px;
     margin-bottom: 30px;
     line-height: 1;
+}
+
+.degree-title {
+    font-size: 15px;
+    margin-bottom: 20px;
+    line-height: 0.95;
 }
 
 .hero img {
@@ -492,46 +498,6 @@ body {
     text-align: center;
 }
 
-/* Section: Counters */
-.section-counters {
-    background: url(https://lh3.googleusercontent.com/pw/AIL4fc_rO_uB4pmFMibh2EI_Dz8L2SwOX0a90Zs-4r7alNeMNrKqghk9L15_gTgFyKrHcid6SFwdEtBTZVYPulilyNaQbulHMyq_eQvsOPAPZDbPFtvoyRs=w2400) no-repeat fixed center / cover;
-    width: 100%;
-    padding: 100px 0;
-    position: relative;
-}
-
-.section-counters:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-.section-counters h4 {
-    color: #fff;
-    margin: 25px 0 0;
-}
-
-.site-section p.counter {
-    font-size: 100px;
-    font-weight: 300;
-    color: #fff;
-    margin: 0;
-    line-height: 0.8;
-}
-
-/* Section: Form*/
-.section-form {
-    padding-bottom: 120px;
-}
-
-.section-form .btn {
-    margin-top: 40px;
-}
-
 /* FOOTER
 ================================================== */
 .site-footer {
@@ -701,11 +667,21 @@ h6 {
     color: #7D7D7D;
 }
 
+.section-divider {
+    border: none;
+    height: 1px;
+    background-color: #dedede;
+    margin: 25px 0;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
+}
+
 /* Contact Button positioning and spacing */
 .btn-contact-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between; /* Evenly space out the buttons */
     align-items: center;
+    width: 60%; /* Set the width to 60% */
+    margin: 0 auto; /* Center the div within the page */
 }
 
 .btn-linkedin,
