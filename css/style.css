@@ -72,11 +72,11 @@ h4 {
     background-color: #212121;
 }
 
-.btn-border {
+/* .btn-border {
     background-color: transparent;
     color: #212121;
     border: 1px solid #212121;
-}
+} */
 
 .btn-fill:hover,
 .btn-fill:focus {
@@ -93,16 +93,13 @@ h4 {
 .form-control {
     padding-left: 10px;
     border-bottom: 1px solid #212121;
-    border-radius: 0;
     background-color: transparent;
     box-shadow: none;
     outline: 0 none transparent;
     -webkit-appearance: none;
     padding: 12px 20px;
     border: 1px solid #ccc;
-    /* Light grey border */
     background-color: #fff;
-    /* White background */
 }
 
 textarea {
@@ -127,7 +124,6 @@ textarea {
 img,
 .service img {
     border-radius: 12px;
-    /* Adjust based on your preference for roundness */
 }
 
 /* LAYOUT
@@ -211,6 +207,13 @@ body {
 
 .hero img {
     height: 600px;
+}
+
+.btn-hero {
+    border: none !important;
+    outline: none;
+    box-shadow: none;
+    background-color: transparent;
 }
 
 /* SITEMAIN
@@ -599,9 +602,7 @@ a.icon-up-bg:hover {
 body {
     font-family: 'Open Sans', sans-serif;
     color: #7D7D7D;
-    /* Dark Grey for general text */
     background-color: #ffffff;
-    /* Soft Cream for body background */
 }
 
 /* HEADINGS */
@@ -612,7 +613,6 @@ h4,
 h5,
 h6 {
     color: #7D7D7D;
-    /* Dark Grey for headings */
 }
 
 /* LINKS AND BUTTONS */
@@ -628,6 +628,7 @@ a:focus {
 .btn {
     background-color: #d8e2ee;
     color: #7D7D7D;
+    border: none;
 }
 
 .btn:hover {
@@ -701,38 +702,54 @@ h6 {
 }
 
 /* Contact Button positioning and spacing */
-.btn-container {
+.btn-contact-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    outline: none;
-    border: none;
 }
 
-.btn-container a {
+.btn-linkedin,
+.btn-github {
     border: none;
     outline: none;
 }
 
-.btn-container a img {
-    border: none;
+.btn-linkedin,
+.btn-github,
+a img {
+    border: none !important;
     outline: none;
+    box-shadow: none;
+    padding: 0;
+    margin: 0 5px;
+    background-color: transparent;
     transition: transform 0.3s ease;
 }
 
-.btn-container a img:hover {
+.btn-contact-container a img {
+    border: none !important;
+    outline: none;
+    box-shadow: none;
+    padding: 0;
+    margin: 0 5px;
+    background-color: transparent;
+    transition: transform 0.3s ease;
+}
+
+.btn-contact-container a img:hover,
+.btn-contact-container a svg:hover {
     transform: scale(1.1);
 }
 
 @media (max-width: 768px) {
-    .btn-container {
+    .btn-contact-container {
         flex-direction: row;
         border: none;
         outline: none;
     }
 
-    .btn-container a img {
-        margin: 10px 0;
+    .btn-contact-container a img {
+        margin: 10px 10px;
         border: none;
         outline: none
     }
