@@ -30,6 +30,17 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+skrollr.init{
+    forceHeight: false,
+    smoothScrolling: true,
+    mobileDeceleration: 0.004,
+};
+
+
 /* CUSTOM RESETS
 ================================================== */
 a {
@@ -72,11 +83,6 @@ h4 {
     background-color: #212121;
 }
 
-/* .btn-border {
-    background-color: transparent;
-    color: #212121;
-    border: 1px solid #212121;
-} */
 
 .btn-fill:hover,
 .btn-fill:focus {
@@ -137,6 +143,16 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     color: #212121;
+    overflow-x: hidden;
+}
+
+.content {
+    width: 100%;
+    /* background: rgba(255, 255, 255, 0.8); */
+    overflow-y: auto;
+    height: 100vh;
+    position: relative;
+    z-index: 2;
 }
 
 .img-res {
@@ -156,8 +172,6 @@ body {
 .gray-bg {
     background-color: #e1e1e1;
 }
-
-
 
 
 /* HERO
@@ -683,7 +697,7 @@ h6 {
     align-items: center;
     width: 25%;
     margin: 0 auto;
-    margin-bottom:15px;
+    margin-bottom: 15px;
     margin-top: 20px;
 }
 
@@ -859,6 +873,7 @@ body {
     padding-bottom: 30px;
     padding-top: 0px;
 }
+
 p.intro-about-me-text {
     margin: 0px;
     padding: 0px;
@@ -1001,6 +1016,7 @@ p.intro-about-me-text {
     margin-top: 0px;
     font-size: 20px;
 }
+
 .scroller {
     max-width: 99%;
     overflow: hidden;
