@@ -966,7 +966,11 @@ p.intro-about-me-text {
 
 #courses .row {
     display: flex;
+    justify-content: flex-start; 
     flex-wrap: nowrap;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 #courses .col-md-4 {
@@ -975,6 +979,7 @@ p.intro-about-me-text {
     justify-content: flex-start;
     align-items: center;
     text-align: center;
+    width: 40%;
 }
 
 .relevant-courses {
