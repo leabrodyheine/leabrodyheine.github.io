@@ -960,6 +960,39 @@ p.intro-about-me-text {
 
 /* Courses
 ================================================== */
+#courses {
+    padding-bottom: 0;
+}
+
+#courses .row {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+#courses .col-md-4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+}
+
+.relevant-courses {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+#courses .col-md-8 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
 .section-courses {
     padding-top: 60px;
     padding-bottom: 120px;
@@ -974,7 +1007,7 @@ p.intro-about-me-text {
 
 .course-item {
     border-left: 2px solid #7D7D7D;
-    /* Matches the existing color scheme */
+    width: 100%;
     padding-left: 20px;
     margin-bottom: 30px;
     position: relative;
@@ -1002,13 +1035,16 @@ p.intro-about-me-text {
     background-color: #d8e2ee;
     color: #7D7D7D;
     padding: 3px 8px;
-    border-radius: 5px;
+    border-radius: 12px;
     margin-right: 5px;
-    font-size: 12px;
+    font-size: 9px;
     display: inline-block;
 }
 
 .course-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
     margin-top: 10px;
 }
 
