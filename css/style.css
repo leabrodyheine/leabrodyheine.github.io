@@ -34,11 +34,13 @@ html {
     scroll-behavior: smooth;
 }
 
-skrollr.init{
+skrollr.init {
     forceHeight: false,
-    smoothScrolling: true,
-    mobileDeceleration: 0.004,
-};
+        smoothScrolling: true,
+        mobileDeceleration: 0.004,
+}
+
+;
 
 
 /* CUSTOM RESETS
@@ -148,11 +150,22 @@ body {
 
 .content {
     width: 100%;
-    /* background: rgba(255, 255, 255, 0.8); */
     overflow-y: auto;
     height: 100vh;
     position: relative;
     z-index: 2;
+    max-height: 100vh;
+    overflow-y: auto;
+    -webkit-mask: linear-gradient(180deg,
+            transparent,
+            white 7%,
+            white 93%,
+            transparent);
+    mask: linear-gradient(180deg,
+            transparent,
+            white 7%,
+            white 93%,
+            transparent);
 }
 
 .img-res {
@@ -685,9 +698,10 @@ h6 {
 .section-divider {
     border: none;
     height: 1px;
+    padding: 0;
+    margin: 0px;
     background-color: #dedede;
-    margin: 25px 0;
-    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 1.5px 6px rgba(0, 0, 0, 0.3);
 }
 
 /* Contact Button positioning and spacing */
