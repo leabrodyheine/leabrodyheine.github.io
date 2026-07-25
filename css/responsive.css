@@ -110,6 +110,12 @@
 		font-size: 22px;
 	}
 
+	/* Section: Dissertation */
+	.dissertation-sticky {
+		padding-right: 0;
+		margin-bottom: 50px;
+	}
+
 	/* Section: Portfolio */
 	.section-portfolio .col-md-4:nth-last-child(-n+3) .portfolio-item {
 		margin-bottom: 30px;

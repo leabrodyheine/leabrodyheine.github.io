@@ -106,4 +106,16 @@ $(function () {
         });
     }
 
+    // Dissertation section: clicking a tab shows its block and hides the others
+    $(document).on('click', '.dissertation-tab', function (event) {
+        event.preventDefault();
+        var targetId = $(this).attr('href');
+
+        $('.dissertation-tab').removeClass('active');
+        $(this).addClass('active');
+
+        $('.dissertation-block').removeClass('active');
+        $(targetId).addClass('active');
+    });
+
 });
