@@ -332,8 +332,6 @@
                             </p>
                             <p class="dissertation-meta">University of St Andrews &middot; Jan 2024 &ndash; Aug
                                 2024</p>
-                            <p class="dissertation-intro">[Outline: one to two sentence summary of what the
-                                dissertation set out to do and why it matters]</p>
                             <a href="Resume/Dissertation_Paper_Lea_Brody_Heine.pdf" class="btn btn-hero"
                                 download>Download Dissertation</a>
                             <div class="dissertation-nav">
@@ -341,6 +339,7 @@
                                     <li><a href="#diss-overview" class="dissertation-tab active">Overview</a></li>
                                     <li><a href="#diss-approach" class="dissertation-tab">Approach</a></li>
                                     <li><a href="#diss-results" class="dissertation-tab">Results</a></li>
+                                    <li><a href="#diss-skills" class="dissertation-tab">Skills</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -349,15 +348,140 @@
                         <div class="dissertation-content">
                             <div id="diss-overview" class="dissertation-block active">
                                 <h4>Overview</h4>
-                                <p></p>
+                                <p>Mast cell diseases — including hereditary alpha-tryptasemia (HαT) and idiopathic mast
+                                    cell activation syndrome (i-MCAS) — are notoriously difficult to diagnose, often
+                                    relying on symptom tracking and treatment response rather than clear biomarkers.
+                                </p>
+                                <p>My MSc dissertation at the University of St Andrews explored whether machine learning
+                                    could help close that gap, applying ML techniques to both pathological clinical data
+                                    and microbiome data to uncover diagnostic patterns and potential biomarkers for
+                                    these conditions.</p>
                             </div>
                             <div id="diss-approach" class="dissertation-block">
                                 <h4>Approach</h4>
-                                <p></p>
+                                <p>Built a standardized preprocessing and EDA pipeline in Python to clean, impute,
+                                    and engineer features from a small, messy real-world clinical dataset (73
+                                    observations, 21 raw features), using domain-informed imputation strategies
+                                    grounded in published clinical ranges rather than naive defaults.</p>
+                                <p>Compared two data augmentation strategies to address the dataset's small size: a
+                                    traditional noise-based approach and a GAN-based synthetic data generator.
+                                    Validated both using Kolmogorov-Smirnov distribution testing, and found that the
+                                    simpler traditional method preserved real data patterns more reliably than the
+                                    GAN.</p>
+                                <p>Trained and tuned multiple classifiers (XGBoost, MLP, Random Forest, Gradient
+                                    Boosting, SVM, Logistic Regression) to distinguish between HαT, MCAS, and normal
+                                    diagnoses, benchmarking models trained on the original dataset against those
+                                    trained on the augmented dataset.</p>
+                                <p>Designed and built an end-to-end microbiome analysis pipeline using Human
+                                    Microbiome Project data as a base: generated synthetic i-MCAS and control
+                                    cohorts via bootstrapping, then applied K-Means and Gaussian Mixture Model
+                                    clustering to uncover candidate bacterial biomarkers, cross-validating findings
+                                    with t-tests.
+                                </p>
+                                <p>Built the model application layer (script.py) to standardize preprocessing and
+                                    apply trained models to new patient data for prediction.</p>
                             </div>
                             <div id="diss-results" class="dissertation-block">
                                 <h4>Results</h4>
-                                <p></p>
+                                <p>The best-performing tabular models (XGBoost, Random Forest, Gradient Boosting)
+                                    achieved 93.3% accuracy on the original dataset; after hyperparameter tuning on the
+                                    augmented dataset (20,000+ samples), XGBoost reached 91.2% accuracy distinguishing
+                                    HαT, MCAS, and normal patients.</p>
+                                <p>GAN-based augmentation failed statistical validation (KS testing showed
+                                    distributions did not match the real data), while traditional noise-based
+                                    augmentation preserved the original dataset's patterns — an important negative
+                                    result showing not all synthetic data techniques generalize well to small medical
+                                    datasets.</p>
+                                <p>The microbiome pipeline identified specific bacteria (including Klebsiella
+                                    pneumoniae strains and Ruminococcus obeum) with significantly different abundances
+                                    between synthetic i-MCAS and normal samples, with two independent clustering methods
+                                    (K-Means and GMM) converging on the same groupings — suggesting the approach is
+                                    picking up genuine structure, not clustering artifacts.</p>
+                                <p>The project's discussion emphasizes its proof-of-concept nature: the goal was to
+                                    build and validate a reusable ML framework for MCD research, not to produce a
+                                    clinically deployable diagnostic tool.</p>
+                            </div>
+                            <div id="diss-skills" class="dissertation-block">
+                                <h4>Skills</h4>
+                                <div class="skills-grid">
+                                    <div class="skills-category">
+                                        <h5>ML &amp; Statistical Models</h5>
+                                        <ul>
+                                            <li>Logistic Regression (One-vs-Rest and Multinomial)</li>
+                                            <li>Decision Tree</li>
+                                            <li>Random Forest</li>
+                                            <li>Gradient Boosting</li>
+                                            <li>XGBoost</li>
+                                            <li>Support Vector Machines (SVM)</li>
+                                            <li>Multilayer Perceptron (MLP) / Neural Networks</li>
+                                            <li>K-Means Clustering</li>
+                                            <li>Gaussian Mixture Models (GMM)</li>
+                                            <li>Principal Component Analysis (PCA)</li>
+                                            <li>Generative Adversarial Networks (GANs)</li>
+                                            <li>Bootstrapping (resampling for synthetic data)</li>
+                                        </ul>
+                                    </div>
+                                    <div class="skills-category">
+                                        <h5>Model Development &amp; Evaluation</h5>
+                                        <ul>
+                                            <li>Multiclass classification</li>
+                                            <li>Supervised &amp; unsupervised learning</li>
+                                            <li>Hyperparameter tuning / GridSearchCV</li>
+                                            <li>Cross-validation</li>
+                                            <li>Stratified shuffle split</li>
+                                            <li>Class imbalance handling (SMOTE, SMOTEENN)</li>
+                                            <li>Confusion matrix analysis</li>
+                                            <li>Evaluation metrics (accuracy, precision, recall, F1)</li>
+                                            <li>Feature importance / interpretability</li>
+                                            <li>Explainable AI (xAI) principles</li>
+                                        </ul>
+                                    </div>
+                                    <div class="skills-category">
+                                        <h5>Data Processing &amp; Feature Engineering</h5>
+                                        <ul>
+                                            <li>Exploratory Data Analysis (EDA)</li>
+                                            <li>Feature engineering</li>
+                                            <li>Domain-informed missing data imputation</li>
+                                            <li>One-hot encoding, label encoding</li>
+                                            <li>StandardScaler / MinMaxScaler normalization</li>
+                                            <li>Dimensionality reduction</li>
+                                            <li>Correlation analysis</li>
+                                            <li>Outlier detection</li>
+                                        </ul>
+                                    </div>
+                                    <div class="skills-category">
+                                        <h5>Synthetic Data &amp; Statistical Validation</h5>
+                                        <ul>
+                                            <li>Data augmentation (noise-based + GAN-based)</li>
+                                            <li>Synthetic data generation and validation</li>
+                                            <li>Hypothesis testing (t-tests, Kolmogorov-Smirnov)</li>
+                                            <li>Distribution comparison/validation methods</li>
+                                        </ul>
+                                    </div>
+                                    <div class="skills-category">
+                                        <h5>Tools &amp; Frameworks</h5>
+                                        <ul>
+                                            <li>Python, Jupyter Notebook</li>
+                                            <li>scikit-learn</li>
+                                            <li>TensorFlow / Keras</li>
+                                            <li>PyTorch</li>
+                                            <li>pandas, NumPy</li>
+                                            <li>Git/GitHub</li>
+                                            <li>joblib (model serialization)</li>
+                                            <li>GPU computing</li>
+                                        </ul>
+                                    </div>
+                                    <div class="skills-category">
+                                        <h5>Domain-Specific / Bioinformatics</h5>
+                                        <ul>
+                                            <li>Microbiome data analysis</li>
+                                            <li>16S rRNA sequencing pipeline knowledge</li>
+                                            <li>Clinical/pathological tabular data analysis</li>
+                                            <li>Biomarker discovery</li>
+                                            <li>Reproducible research pipeline design</li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -116,6 +116,10 @@
 		margin-bottom: 50px;
 	}
 
+	.skills-grid {
+		grid-template-columns: 1fr;
+	}
+
 	/* Section: Portfolio */
 	.section-portfolio .col-md-4:nth-last-child(-n+3) .portfolio-item {
 		margin-bottom: 30px;
