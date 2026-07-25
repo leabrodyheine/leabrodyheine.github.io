@@ -1222,6 +1222,62 @@ p.intro-about-me-text {
     line-height: 23px;
 }
 
+.mast-cell-figure {
+    width: 620px;
+    max-width: 100%;
+    margin: 20px 0 30px;
+}
+
+.mast-cell-media {
+    position: relative;
+}
+
+.mast-cell-figure img {
+    display: block;
+    width: 300px;
+    border-radius: 8px;
+}
+
+.mast-cell-arrow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.mast-cell-label {
+    position: absolute;
+    left: 475px;
+    top: 45px;
+    font-family: 'Caveat', cursive;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.15;
+    color: #2c4a6e;
+    white-space: nowrap;
+    transform: rotate(-8deg);
+    transform-origin: left bottom;
+}
+
+.mast-cell-caption {
+    max-width: 300px;
+    margin: 8px 0 0;
+    font-size: 9px;
+    font-style: italic;
+    color: #7D7D7D;
+    line-height: 1.5;
+    text-align: right;
+}
+
+.mast-cell-caption a {
+    border: none;
+    border-radius: 0;
+    color: #7D7D7D;
+    text-decoration: underline;
+}
+
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
