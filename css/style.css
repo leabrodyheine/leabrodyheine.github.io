@@ -1223,8 +1223,8 @@ p.intro-about-me-text {
 }
 
 .mast-cell-figure {
-    width: 620px;
-    max-width: 100%;
+    width: 100%;
+    max-width: 620px;
     margin: 20px 0 30px;
 }
 
@@ -1234,7 +1234,7 @@ p.intro-about-me-text {
 
 .mast-cell-figure img {
     display: block;
-    width: 300px;
+    width: 48.4%;
     border-radius: 8px;
 }
 
@@ -1247,22 +1247,15 @@ p.intro-about-me-text {
     pointer-events: none;
 }
 
-.mast-cell-label {
-    position: absolute;
-    left: 475px;
-    top: 45px;
+.mast-cell-label-text {
     font-family: 'Caveat', cursive;
     font-size: 24px;
     font-weight: 600;
-    line-height: 1.15;
-    color: #2c4a6e;
-    white-space: nowrap;
-    transform: rotate(-8deg);
-    transform-origin: left bottom;
+    fill: #2c4a6e;
 }
 
 .mast-cell-caption {
-    max-width: 300px;
+    max-width: 48.4%;
     margin: 8px 0 0;
     font-size: 9px;
     font-style: italic;
