@@ -18,6 +18,8 @@ $(function () {
         $('html, body').stop().animate({
             scrollTop: $($anchor.attr('href')).offset().top - headerOffset
         }, 800, 'easeOutExpo');
+        $('.navbar-toggle').removeClass('act');
+        $('.main-menu').removeClass('act');
         event.preventDefault();
     });
 
@@ -121,5 +123,44 @@ $(function () {
         $('.dissertation-block').removeClass('active');
         $(targetId).addClass('active');
     });
+
+    // Size the hero name as a percentage of its column's width so it scales
+    // continuously as the window is resized, instead of sitting at one fixed
+    // size and only reacting once a breakpoint is crossed. The shrink loop
+    // below is just a safety net: Bootstrap's column width isn't perfectly
+    // smooth (it can dip briefly around the mode switch to the stacked
+    // mobile layout), so this catches the rare case where the percentage-based
+    // size would still overflow.
+    var HERO_NAME_RATIO = 0.0623;
+    var MAX_HERO_NAME_FONT = 46;
+    var MIN_HERO_NAME_FONT = 24;
+
+    function fitHeroName() {
+        var $name = $('.hero h1');
+        if (!$name.length) return;
+        // Force single-line, and shrink-wrap to the text itself (inline-block)
+        // while measuring -- a block-level element's scrollWidth just matches
+        // its own box (which fills the container) whenever the text is
+        // narrower than that box, so it never signals the true text width.
+        var containerWidth = $name.parent().width();
+        var fontSize = Math.min(MAX_HERO_NAME_FONT, Math.max(MIN_HERO_NAME_FONT, containerWidth * HERO_NAME_RATIO));
+        $name.css({ whiteSpace: 'nowrap', display: 'inline-block', fontSize: fontSize + 'px' });
+        while ($name[0].scrollWidth > containerWidth && fontSize > MIN_HERO_NAME_FONT) {
+            fontSize -= 1;
+            $name.css('font-size', fontSize + 'px');
+        }
+        $name.css('display', '');
+    }
+
+    var heroNameFrame;
+    $(window).on('resize', function () {
+        cancelAnimationFrame(heroNameFrame);
+        heroNameFrame = requestAnimationFrame(fitHeroName);
+    });
+
+    fitHeroName();
+    if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(fitHeroName);
+    }
 
 });

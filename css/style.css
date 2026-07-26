@@ -194,12 +194,17 @@ body {
 .hero .container {
     position: relative;
     height: 100%;
+    /* Bootstrap's .container snaps to fixed widths at each breakpoint
+       instead of scaling with the viewport; overriding that here lets the
+       50/50 column split below scale continuously instead of jumping. */
+    max-width: 100%;
 }
 
 .hero .col-md-6:first-child {
     position: absolute;
     top: 35%;
     left: 0;
+    width: 50%;
     transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
@@ -212,6 +217,7 @@ body {
     position: absolute;
     right: 0;
     bottom: 0;
+    width: 50%;
 }
 
 .hero h1 {
@@ -222,21 +228,24 @@ body {
 }
 
 .job-title {
-    font-size: 24px;
+    font-size: clamp(16px, calc(14.06px + 0.518vw), 24px);
     margin-top: 20px;
     margin-bottom: 10px;
     line-height: 1;
 }
 
 .degree-title {
-    font-size: 18px;
+    font-size: clamp(13px, calc(11.79px + 0.324vw), 18px);
     margin-bottom: 20px;
     line-height: 0.95;
     margin-top: 0px;
 }
 
 .hero img {
-    height: 600px;
+    /* Fluid: scales continuously between 360px (at the 768px hand-off to the
+       stacked mobile layout) and 600px (at 1920px+), instead of jumping
+       between fixed heights at breakpoints. */
+    height: clamp(360px, calc(200px + 20.833vw), 600px);
 }
 
 .btn-hero {
@@ -844,7 +853,16 @@ a:not(.nav-link),
 }
 
 .navbar-nav>li {
-    margin: 0 23px;
+    /* Fluid gap: scales continuously between 12px (near the 1440px hamburger
+       handoff) and 23px (at 1920px+) instead of jumping between fixed sizes
+       at breakpoints. */
+    margin: 0 clamp(6px, calc(-10.5px + 1.15vw), 11.5px);
+}
+
+.navbar-nav>li>a {
+    /* Fluid text size: scales continuously between 13px and 16px over the
+       same range, for the same reason. */
+    font-size: clamp(13px, calc(4px + 0.625vw), 16px);
 }
 
 /* Navigation styling */
