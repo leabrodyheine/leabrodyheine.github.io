@@ -269,6 +269,7 @@ body {
 
 .img-lines {
     margin: 15px 0 40px;
+    opacity: 0.51;
 }
 
 .site-section p {
@@ -899,6 +900,7 @@ p.intro-about-me-text {
 
 .img-lines-about {
     margin-bottom: 0px;
+    opacity: 0.51;
 }
 
 .about-title {
