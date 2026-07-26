@@ -1346,24 +1346,28 @@ p.intro-about-me-text {
     width: 28px;
     height: 28px;
     object-fit: contain;
+    border-radius: 4px;
     flex-shrink: 0;
 }
 
 .experience-card-company span {
     font-size: 16px;
     font-weight: 700;
-    color: #212121;
+    color: #7D7D7D;
 }
 
 .experience-card-dates {
     font-size: 13px;
     font-style: italic;
-    color: #5A6B80;
+    color: #7D7D7D;
     white-space: nowrap;
 }
 
 .experience-card-body {
     padding: 20px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
 }
 
 .experience-card-body h5 {
@@ -1405,6 +1409,33 @@ p.intro-about-me-text {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0 40px;
+}
+
+.experience-skills {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    margin-top: auto;
+    padding-top: 14px;
+    border-top: 1px solid #eee;
+}
+
+.experience-skills-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #B0B0B0;
+    margin-right: 2px;
+}
+
+.experience-skills span:not(.experience-skills-label) {
+    background-color: #d8e2ee;
+    color: #7D7D7D;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 11px;
 }
 
 /* Tech Stack Bar
