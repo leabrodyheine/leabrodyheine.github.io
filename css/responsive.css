@@ -250,15 +250,6 @@
 		grid-template-columns: 1fr;
 	}
 
-	/* Section: Portfolio */
-	.section-portfolio .col-md-4:nth-last-child(-n+3) .portfolio-item {
-		margin-bottom: 30px;
-	}
-
-	.section-portfolio .col-md-4:nth-last-child(-n+2) .portfolio-item {
-		margin-bottom: 0;
-	}
-
 	/* Section: Counters */
 	.section-counters {
 		padding: 70px 0;
@@ -415,21 +406,14 @@
 	}
 
 	/* Section: Portfolio */
-	.section-portfolio .col-xs-6:nth-child(odd) {
-		padding-right: 7.5px;
+	.portfolio-filters {
+		gap: 8px;
+		margin: 20px 0 30px;
 	}
 
-	.section-portfolio .col-xs-6:nth-child(even) {
-		padding-left: 7.5px;
-	}
-
-	.portfolio-item,
-	.section-portfolio .col-md-4:nth-last-child(-n+3) .portfolio-item {
-		margin-bottom: 15px;
-	}
-
-	.section-portfolio .col-md-4:nth-last-child(-n+2) .portfolio-item {
-		margin-bottom: 0px;
+	.portfolio-filter {
+		font-size: 12px;
+		padding: 6px 14px;
 	}
 
 	.section-services .container {
@@ -505,24 +489,6 @@
 			}
 
 			/* Section: Portfolio */
-			.section-portfolio .col-xs-6 {
-				width: 100%;
-				padding: 0;
-			}
-
-			.section-portfolio .col-xs-6:nth-child(odd) {
-				padding-right: 0px;
-			}
-
-			.section-portfolio .col-xs-6:nth-child(even) {
-				padding-left: 0px;
-			}
-
-			.portfolio-item,
-			.section-portfolio .col-md-4:nth-last-child(-n+3) .portfolio-item {
-				margin-bottom: 0px;
-			}
-
 			.section-portfolio .btn {
 				margin-top: 25px;
 			}

@@ -126,6 +126,39 @@ $(function () {
         });
     }
 
+    // Portfolio section: filter project cards by category
+    $(document).on('click', '.portfolio-filter', function () {
+        var filter = $(this).data('filter');
+
+        $('.portfolio-filter').removeClass('active');
+        $(this).addClass('active');
+
+        $('.portfolio-col').each(function () {
+            var $col = $(this);
+            var show = filter === 'all' || $col.data('category') === filter;
+            $col.toggleClass('is-hidden', !show);
+        });
+    });
+
+    // Portfolio section: clicking anywhere on a card opens its project modal,
+    // except the GitHub link -- that should only navigate, not also pop the modal.
+    function openPortfolioCardModal($card) {
+        var target = $card.data('modal-target');
+        if (target) $(target).modal('show');
+    }
+
+    $(document).on('click', '.portfolio-card', function (event) {
+        if ($(event.target).closest('.portfolio-card-links').length) return;
+        openPortfolioCardModal($(this));
+    });
+
+    $(document).on('keydown', '.portfolio-card', function (event) {
+        if (event.key !== 'Enter' && event.key !== ' ') return;
+        if ($(event.target).closest('.portfolio-card-links').length) return;
+        event.preventDefault();
+        openPortfolioCardModal($(this));
+    });
+
     // Dissertation section: clicking a tab shows its block and hides the others
     $(document).on('click', '.dissertation-tab', function (event) {
         event.preventDefault();
