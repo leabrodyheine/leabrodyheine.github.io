@@ -1303,6 +1303,110 @@ p.intro-about-me-text {
     color: #B0B0B0;
 }
 
+/* Section: Work Experience
+================================================== */
+.experience-grid {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.experience-grid>[class*="col-"] {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.experience-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    text-align: left;
+}
+
+.experience-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    background-color: #d8e2ee;
+    padding: 14px 20px;
+}
+
+.experience-card-company {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.experience-logo {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.experience-card-company span {
+    font-size: 16px;
+    font-weight: 700;
+    color: #212121;
+}
+
+.experience-card-dates {
+    font-size: 13px;
+    font-style: italic;
+    color: #5A6B80;
+    white-space: nowrap;
+}
+
+.experience-card-body {
+    padding: 20px 24px 24px;
+}
+
+.experience-card-body h5 {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #7D7D7D;
+    margin: 0 0 12px;
+}
+
+.experience-card-body ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.experience-card-body li {
+    position: relative;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #7D7D7D;
+    padding-left: 16px;
+    margin-bottom: 8px;
+}
+
+.experience-card-body li:last-child {
+    margin-bottom: 0;
+}
+
+.experience-card-body li::before {
+    content: '\2022';
+    position: absolute;
+    left: 0;
+    color: #B0B0B0;
+}
+
+.experience-bullets-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 40px;
+}
+
 /* Tech Stack Bar
 ================================================== */
 .tech-stack-section {
