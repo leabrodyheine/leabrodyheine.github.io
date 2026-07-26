@@ -853,16 +853,15 @@ a:not(.nav-link),
 }
 
 .navbar-nav>li {
-    /* Fluid gap: scales continuously between 12px (near the 1440px hamburger
-       handoff) and 23px (at 1920px+) instead of jumping between fixed sizes
-       at breakpoints. */
-    margin: 0 clamp(6px, calc(-10.5px + 1.15vw), 11.5px);
+    /* Fluid gap: scales continuously down to a minimum near the hamburger
+       hand-off, instead of jumping between fixed sizes at breakpoints. */
+    margin: 0 clamp(5px, calc(-2.065px + 0.7065vw), 11.5px);
 }
 
 .navbar-nav>li>a {
-    /* Fluid text size: scales continuously between 13px and 16px over the
-       same range, for the same reason. */
-    font-size: clamp(13px, calc(4px + 0.625vw), 16px);
+    /* Fluid text size: scales continuously over the same range, for the
+       same reason. */
+    font-size: clamp(11px, calc(5.565px + 0.5435vw), 16px);
 }
 
 /* Navigation styling */

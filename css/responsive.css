@@ -1,10 +1,10 @@
 /*==========  Non-Mobile First Method  ==========*/
 
-/* Nav has 8 items and doesn't comfortably fit on one line until ~1400px,
-   so use the mobile-style hamburger/overlay menu well before the "mobile"
-   device tiers below -- otherwise items get clipped off the edge of the
-   header on laptop/tablet-width screens. */
-@media only screen and (max-width : 1440px) {
+/* Nav has 8 items; the fluid font-size/spacing above lets it shrink
+   smoothly as the window narrows, but it still needs a hard hand-off to
+   the mobile-style hamburger/overlay menu once even the smallest fluid
+   size can't fit all 8 items on one line. */
+@media only screen and (max-width : 1024px) {
 
 	.navbar-header {
 		float: none;
