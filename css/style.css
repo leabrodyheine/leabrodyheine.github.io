@@ -853,10 +853,10 @@ a:not(.nav-link),
 }
 
 .navbar-nav>li {
-    /* Fluid gap: scales continuously down to a minimum near the hamburger
-       hand-off, instead of jumping between fixed sizes at breakpoints. */
-    margin: 0 clamp(5px, calc(-2.065px + 0.7065vw), 11.5px);
-    /* Items are already explicitly sized via the fluid font-size/margin --
+    /* Spacing between items now comes entirely from .navbar-nav's own
+       space-between distribution across its 85% width, below. */
+    margin: 0;
+    /* Items are already explicitly sized via the fluid font-size --
        don't let flexbox additionally shrink them (even by a rounding pixel
        or two), which is what was forcing "What I Do" to wrap. */
     flex-shrink: 0;
@@ -950,6 +950,15 @@ p.intro-about-me-text {
     margin: 0 auto;
 }
 
+#primary-navigation .container {
+    /* The generic .container above leaves a flat 10%-per-side gap at every
+       width. The nav bar itself now controls its own side spacing (see
+       .navbar-nav's 85% width below), so this just goes edge-to-edge. */
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 .navbar-collapse {
     width: 100%;
 }
@@ -972,11 +981,16 @@ p.intro-about-me-text {
 
 .navbar-nav {
     display: flex !important;
-    /* space-between stretched gaps to fill the full bar width regardless of
-       the item margins below, actively fighting the fluid shrink -- center
-       lets the margins actually control the spacing. */
-    justify-content: center !important;
-    width: 100% !important;
+    /* Spread the items across the nav's own width (85% of the bar, set
+       below) so they stay proportionally spaced out as the window resizes,
+       instead of clustering with fixed gaps. */
+    justify-content: space-between !important;
+    width: 85% !important;
+    margin: 0 auto !important;
+    /* Bootstrap's stock float:left on this class ignores auto-margins
+       (floated boxes don't center that way), which was pinning the bar to
+       the left edge instead of centering it. */
+    float: none !important;
 }
 
 /* Courses

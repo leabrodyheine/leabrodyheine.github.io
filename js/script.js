@@ -10,6 +10,20 @@ $(function () {
         }
     });
 
+    // Suppress the mobile menu's open/close transition while the window is
+    // actively being resized -- crossing the hamburger breakpoint mid-resize
+    // would otherwise animate the (empty, unclicked) overlay fading in and
+    // out, which reads as a flash. Re-enabled shortly after resizing stops
+    // so a real click still animates normally.
+    var resizeSettleTimer;
+    $(window).on('resize', function () {
+        $('html').addClass('is-resizing');
+        clearTimeout(resizeSettleTimer);
+        resizeSettleTimer = setTimeout(function () {
+            $('html').removeClass('is-resizing');
+        }, 250);
+    });
+
     var headerOffset = $('.site-header').outerHeight();
 
     //jQuery for page scrolling feature - requires jQuery Easing plugin

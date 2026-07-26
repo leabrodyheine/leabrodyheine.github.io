@@ -100,6 +100,18 @@
 		transform: scale(0);
 	}
 
+	/* Crossing this breakpoint while resizing makes the menu jump straight
+	   into this rule's opacity/transform values, and because the transition
+	   above is defined in the same rule, the browser animates that jump --
+	   a visible flash of the (empty) overlay opening and closing even though
+	   nothing was clicked. .is-resizing (toggled in script.js) kills the
+	   transition only while the window is actively being resized, so real
+	   clicks still animate normally once resizing has settled. */
+	.is-resizing .main-menu {
+		transition: none !important;
+		-webkit-transition: none !important;
+	}
+
 	.main-menu.act {
 		opacity: 1;
 		-webkit-transform: scale(1);
