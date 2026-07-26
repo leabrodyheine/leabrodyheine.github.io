@@ -856,6 +856,10 @@ a:not(.nav-link),
     /* Fluid gap: scales continuously down to a minimum near the hamburger
        hand-off, instead of jumping between fixed sizes at breakpoints. */
     margin: 0 clamp(5px, calc(-2.065px + 0.7065vw), 11.5px);
+    /* Items are already explicitly sized via the fluid font-size/margin --
+       don't let flexbox additionally shrink them (even by a rounding pixel
+       or two), which is what was forcing "What I Do" to wrap. */
+    flex-shrink: 0;
 }
 
 .navbar-nav>li>a {
@@ -968,7 +972,10 @@ p.intro-about-me-text {
 
 .navbar-nav {
     display: flex !important;
-    justify-content: space-between !important;
+    /* space-between stretched gaps to fill the full bar width regardless of
+       the item margins below, actively fighting the fluid shrink -- center
+       lets the margins actually control the spacing. */
+    justify-content: center !important;
     width: 100% !important;
 }
 
