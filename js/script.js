@@ -10,19 +10,21 @@ $(function () {
         }
     });
 
+    var headerOffset = $('.site-header').outerHeight();
+
     //jQuery for page scrolling feature - requires jQuery Easing plugin
     $(document).on('click', '.page-scroll a', function (event) {
         var $anchor = $(this);
         $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top
-        }, 1000, 'easeInOutExpo');
+            scrollTop: $($anchor.attr('href')).offset().top - headerOffset
+        }, 800, 'easeOutExpo');
         event.preventDefault();
     });
 
     // Highlight the top nav as scrolling occurs
     $('body').scrollspy({
         target: '.site-header',
-        offset: 10
+        offset: headerOffset + 10
     });
 
     /* Progress bar */
@@ -33,14 +35,16 @@ $(function () {
         });
     }
 
-    $(document).bind('scroll', function (ev) {
-        var scrollOffset = $(document).scrollTop();
-        var containerOffset = $section.offset().top - window.innerHeight;
-        if (scrollOffset > containerOffset) {
-            loadDaBars();
-            $(document).unbind('scroll');
-        }
-    });
+    if ($section.length) {
+        $(document).bind('scroll', function (ev) {
+            var scrollOffset = $(document).scrollTop();
+            var containerOffset = $section.offset().top - window.innerHeight;
+            if (scrollOffset > containerOffset) {
+                loadDaBars();
+                $(document).unbind('scroll');
+            }
+        });
+    }
 
     /* Counters  */
     if ($(".section-counters .start").length > 0) {

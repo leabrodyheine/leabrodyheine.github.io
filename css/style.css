@@ -30,10 +30,6 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 skrollr.init {
     forceHeight: false,
         smoothScrolling: true,
@@ -139,7 +135,6 @@ img,
 html,
 body {
     width: 100%;
-    height: 100%;
     margin: 0;
     padding: 0;
     font-family: 'Open Sans', sans-serif;
@@ -191,9 +186,9 @@ body {
 ================================================== */
 .hero {
     background: url(../img/hero.jpg) no-repeat center / cover;
-    height: 100%;
+    height: calc(100vh - 136px);
     width: 100%;
-    min-height: 700px;
+    min-height: 550px;
 }
 
 .hero .container {
