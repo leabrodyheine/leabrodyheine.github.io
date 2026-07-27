@@ -189,7 +189,7 @@ $(function () {
                 alt: '',
                 class: 'tech-chip-icon'
             })
-            : $('<span>', { class: 'glyphicon glyphicon-tag tech-chip-icon', 'aria-hidden': 'true' });
+            : $('<span>', { class: 'glyphicon glyphicon-cog tech-chip-icon', 'aria-hidden': 'true' });
         $chip.prepend($icon);
     });
 
