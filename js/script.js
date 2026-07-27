@@ -163,7 +163,9 @@ $(function () {
     // matching devicon slug exists, otherwise fall back to a generic tag icon.
     var TECH_ICON_SLUGS = {
         'Node.js': 'nodejs',
-        'React': 'react',
+        'Express': 'express',
+        'Vue.js': 'vuejs',
+        'Chart.js': 'chartjs',
         'MongoDB': 'mongodb',
         'JavaScript': 'javascript',
         'Python': 'python',
@@ -172,10 +174,10 @@ $(function () {
         'HTML5': 'html5',
         'CSS3': 'css3',
         'D3.js': 'd3js',
+        'Mapbox GL': 'mapbox',
+        'Plotly.js': 'plotly',
         'Scikit-Learn': 'scikitlearn',
-        'TensorFlow': 'tensorflow',
         'Pandas': 'pandas',
-        'Matplotlib': 'matplotlib',
         'JUnit': 'junit',
         'JSON': 'json'
     };
