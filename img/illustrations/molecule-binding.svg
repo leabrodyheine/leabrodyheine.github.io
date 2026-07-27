@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240">
+  <rect width="400" height="240" fill="#eef3f9"/>
+
+  <!-- protein pocket (blob) with a docking notch -->
+  <path d="M230,50 C300,40 360,70 365,120 C370,165 330,205 275,200
+           C240,197 230,175 205,170 C215,150 220,130 205,115
+           C220,100 215,75 230,50 Z"
+        fill="#fff" stroke="#9aa7b5" stroke-width="2.5"/>
+
+  <!-- small molecule (hexagon ring skeletal structure) -->
+  <g stroke="#5b7a9d" stroke-width="3" fill="none" stroke-linecap="round">
+    <polygon points="70,120 95,105 120,120 120,148 95,163 70,148"/>
+    <line x1="120" y1="120" x2="145" y2="108"/>
+    <line x1="70" y1="120" x2="48" y2="105"/>
+    <line x1="95" y1="163" x2="95" y2="188"/>
+  </g>
+  <g fill="#3f5a78">
+    <circle cx="70" cy="120" r="5"/>
+    <circle cx="95" cy="105" r="5"/>
+    <circle cx="120" cy="120" r="5"/>
+    <circle cx="120" cy="148" r="5"/>
+    <circle cx="95" cy="163" r="5"/>
+    <circle cx="70" cy="148" r="5"/>
+    <circle cx="145" cy="108" r="4"/>
+    <circle cx="48" cy="105" r="4"/>
+    <circle cx="95" cy="188" r="4"/>
+  </g>
+
+  <!-- binding interaction indicator -->
+  <line x1="150" y1="130" x2="197" y2="130" stroke="#212121" stroke-width="2.5" stroke-dasharray="6 5"/>
+  <circle cx="200" cy="130" r="6" fill="#212121"/>
+</svg>

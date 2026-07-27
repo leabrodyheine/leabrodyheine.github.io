@@ -695,6 +695,32 @@
                 </div>
 
                 <div class="row portfolio-grid">
+                    <div class="col-md-4 col-sm-6 portfolio-col" data-category="data">
+                        <div class="portfolio-card" data-modal-target="#portfolioItem11" role="button" tabindex="0"
+                            aria-label="View details for KIT Inhibitor Binding Prediction">
+                            <div class="portfolio-card-header">
+                                <span class="glyphicon glyphicon-stats portfolio-card-icon" aria-hidden="true"></span>
+                                <span class="portfolio-card-category">Data Science &amp; ML</span>
+                                <span class="portfolio-wip-badge">WIP</span>
+                            </div>
+                            <div class="portfolio-card-body">
+                                <h4>KIT Inhibitor Binding Prediction</h4>
+                                <p>ML pipeline predicting small-molecule binding affinity and mutant selectivity
+                                    against the KIT kinase receptor.</p>
+                                <div class="portfolio-card-footer">
+                                    <div class="portfolio-tags">
+                                        <span>Python</span><span>RDKit</span><span>XGBoost</span>
+                                    </div>
+                                    <div class="portfolio-card-links">
+                                        <a href="https://github.com/leabrodyheine/kit-inhibitor-binding-prediction"
+                                            aria-label="View source on GitHub"><span
+                                                class="glyphicon glyphicon-link"></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="col-md-4 col-sm-6 portfolio-col" data-category="web">
                         <div class="portfolio-card" data-modal-target="#portfolioItem1" role="button" tabindex="0"
                             aria-label="View details for Full Stack Web Development">
@@ -1153,305 +1179,517 @@
     </footer>/#footer -->
 
     <!-- Modals -->
-    <div id="portfolioItem1" class="modal fade" role="dialog">
+    <div id="portfolioItem1" class="modal fade project-modal" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header">
-                    <a class="close" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></a>
-                    <img class="img-res" src="img/philipp-katzenberger-iIJrUoeRoCQ-unsplash.jpg" alt="">
-                </div>
-                <div class="modal-body">
-                    <h2 class="modal-title"> <em>Full Stack Web Development</em></h2>
-                    <p>This project showcases the development of a full-stack web application using Node.js for the
-                        backend, React for the frontend, and MongoDB for the database. It includes user authentication,
-                        CRUD operations, and interactive data visualizations.</p>
-                    <p>Key features include:
-                    <ul>
-                        <li>Responsive web design implemented with Bootstrap and React.</li>
-                        <li>Backend API development with Express and Node.js.</li>
-                        <li>Data persistence with MongoDB and Mongoose ORM.</li>
-                        <li>Real-time data handling with Socket.io.</li>
-                    </ul>
-                    </p>
-                    <p>This project was designed to demonstrate the ability to integrate various technologies into a
-                        seamless user experience and deploy a fully functional web application.</p>
-                </div>
-                <div class="modal-footer">
-                    <a href="https://github.com/leabrodyheine/Full-Stack-Web-Dev-Project" class="btn btn-hero">Visit
-                        Page</a>
+                <a class="project-modal-close" data-dismiss="modal" aria-label="Close"><span
+                        class="glyphicon glyphicon-remove"></span></a>
+                <div class="project-modal-body">
+                    <div class="project-modal-sidebar">
+                        <div class="project-modal-cover">
+                            <img src="img/illustrations/fullstack.svg" alt="">
+                        </div>
+                        <div class="project-modal-badges">
+                            <span class="project-modal-category-badge"><span class="glyphicon glyphicon-globe"
+                                    aria-hidden="true"></span> Web Development</span>
+                        </div>
+                        <h2 class="project-modal-title">Full Stack Web Development</h2>
+                        <div class="project-modal-stack">
+                            <p class="project-modal-section-label">Tech Stack</p>
+                            <div class="project-modal-stack-list">
+                                <span class="tech-chip">Node.js</span><span class="tech-chip">React</span><span
+                                    class="tech-chip">MongoDB</span><span class="tech-chip">Express</span><span
+                                    class="tech-chip">Socket.io</span>
+                            </div>
+                        </div>
+                        <div class="project-modal-skills">
+                            <p class="project-modal-section-label">Skills Gained</p>
+                            <div class="project-modal-skills-list">
+                                <span>Full-Stack Architecture</span><span>REST API Design</span><span>Real-Time
+                                    Communication</span><span>NoSQL Data Modeling</span>
+                            </div>
+                        </div>
+                        <a href="https://github.com/leabrodyheine/Full-Stack-Web-Dev-Project"
+                            class="btn btn-hero project-modal-github-btn" target="_blank"><span
+                                class="glyphicon glyphicon-link"></span> View on GitHub</a>
+                    </div>
+                    <div class="project-modal-content">
+                        <p>A full-stack web application built with Node.js, React, and MongoDB, featuring user
+                            authentication, CRUD operations, and interactive data handling.</p>
+                        <p class="project-modal-section-label">Key Features</p>
+                        <div class="project-modal-features-grid">
+                            <div class="feature-item"><strong>Responsive UI</strong> built with React &amp; Bootstrap
+                            </div>
+                            <div class="feature-item"><strong>REST API</strong> with Express &amp; Node.js</div>
+                            <div class="feature-item"><strong>MongoDB persistence</strong> via Mongoose ORM</div>
+                            <div class="feature-item"><strong>Real-time updates</strong> with Socket.io</div>
+                        </div>
+                    </div>
                 </div>
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
 
-    <div id="portfolioItem2" class="modal fade" role="dialog">
+    <div id="portfolioItem2" class="modal fade project-modal" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header">
-                    <a class="close" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></a>
-                    <img class="img-res" src="img/mayko-sousa-gh_v_MjBKIA-unsplash.jpg" alt="">
-                </div>
-                <div class="modal-body">
-                    <h2 class="modal-title"><em>Shortest Flight Path Algorithm</em></h2>
-                    <p>This project focuses on finding the shortest flight path between airports using Dijkstra's
-                        algorithm. It utilizes a graph representation of airports and flight routes to calculate the
-                        minimum travel distance.</p>
-                    <p>Key features include:
-                    <ul>
-                        <li>Graph-based data modeling of global flight networks.</li>
-                        <li>Implementation of Dijkstra's algorithm for shortest path finding.</li>
-                        <li>Interactive user interface for selecting start and destination airports.</li>
-                        <li>Visualization of flight paths on a world map using JavaScript libraries.</li>
-                    </ul>
-                    </p>
-                    <p>This application is helpful for educational purposes and as a practical tool for planning travel
-                        routes.</p>
-                </div>
-                <div class="modal-footer">
-                    <a href="https://github.com/leabrodyheine/Shortest-Flight-Path" class="btn btn-hero">Visit Page</a>
+                <a class="project-modal-close" data-dismiss="modal" aria-label="Close"><span
+                        class="glyphicon glyphicon-remove"></span></a>
+                <div class="project-modal-body">
+                    <div class="project-modal-sidebar">
+                        <div class="project-modal-cover">
+                            <img src="img/illustrations/graph-path.svg" alt="">
+                        </div>
+                        <div class="project-modal-badges">
+                            <span class="project-modal-category-badge"><span class="glyphicon glyphicon-random"
+                                    aria-hidden="true"></span> Algorithms &amp; AI</span>
+                        </div>
+                        <h2 class="project-modal-title">Shortest Flight Path Algorithm</h2>
+                        <div class="project-modal-stack">
+                            <p class="project-modal-section-label">Tech Stack</p>
+                            <div class="project-modal-stack-list">
+                                <span class="tech-chip">JavaScript</span><span class="tech-chip">Dijkstra's
+                                    Algorithm</span><span class="tech-chip">Graphs</span>
+                            </div>
+                        </div>
+                        <div class="project-modal-skills">
+                            <p class="project-modal-section-label">Skills Gained</p>
+                            <div class="project-modal-skills-list">
+                                <span>Graph Algorithms</span><span>Shortest-Path Search</span><span>Data
+                                    Modeling</span><span>Map Visualization</span>
+                            </div>
+                        </div>
+                        <a href="https://github.com/leabrodyheine/Shortest-Flight-Path"
+                            class="btn btn-hero project-modal-github-btn" target="_blank"><span
+                                class="glyphicon glyphicon-link"></span> View on GitHub</a>
+                    </div>
+                    <div class="project-modal-content">
+                        <p>A shortest-path finder between airports built on a graph representation of flight routes,
+                            using Dijkstra's algorithm to compute minimum-distance travel routes.</p>
+                        <p class="project-modal-section-label">Key Features</p>
+                        <div class="project-modal-features-grid">
+                            <div class="feature-item"><strong>Graph modeling</strong> of global flight networks
+                            </div>
+                            <div class="feature-item"><strong>Dijkstra's algorithm</strong> for shortest-path search
+                            </div>
+                            <div class="feature-item"><strong>Interactive UI</strong> for airport selection</div>
+                            <div class="feature-item"><strong>Map visualization</strong> of computed flight paths
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
 
-    <div id="portfolioItem3" class="modal fade" role="dialog">
+    <div id="portfolioItem3" class="modal fade project-modal" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header">
-                    <a class="close" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></a>
-                    <img class="img-res" src="img/Screenshot 2024-07-28 at 4.29.33 PM.png" alt="">
+                <a class="project-modal-close" data-dismiss="modal" aria-label="Close"><span
+                        class="glyphicon glyphicon-remove"></span></a>
+                <div class="project-modal-body">
+                    <div class="project-modal-sidebar">
+                        <div class="project-modal-cover">
+                            <img src="img/Screenshot 2024-07-28 at 4.29.33 PM.png" alt="">
+                        </div>
+                        <div class="project-modal-badges">
+                            <span class="project-modal-category-badge"><span class="glyphicon glyphicon-stats"
+                                    aria-hidden="true"></span> Data Science &amp; ML</span>
+                        </div>
+                        <h2 class="project-modal-title">California Schools Data Visualization</h2>
+                        <div class="project-modal-stack">
+                            <p class="project-modal-section-label">Tech Stack</p>
+                            <div class="project-modal-stack-list">
+                                <span class="tech-chip">Tableau</span><span class="tech-chip">D3.js</span><span
+                                    class="tech-chip">GIS</span>
+                            </div>
+                        </div>
+                        <div class="project-modal-skills">
+                            <p class="project-modal-section-label">Skills Gained</p>
+                            <div class="project-modal-skills-list">
+                                <span>Data Visualization</span><span>Geospatial Analysis</span><span>Dashboard
+                                    Design</span><span>Public Dataset Wrangling</span>
+                            </div>
+                        </div>
+                        <a href="https://github.com/leabrodyheine/California-Schools-Data-Visualization"
+                            class="btn btn-hero project-modal-github-btn" target="_blank"><span
+                                class="glyphicon glyphicon-link"></span> View on GitHub</a>
+                    </div>
+                    <div class="project-modal-content">
+                        <p>Interactive dashboards visualizing school performance, funding, and demographic trends
+                            across California, built from public education records.</p>
+                        <p class="project-modal-section-label">Key Features</p>
+                        <div class="project-modal-features-grid">
+                            <div class="feature-item"><strong>Interactive dashboards</strong> with Tableau &amp; D3.js
+                            </div>
+                            <div class="feature-item"><strong>Demographic analysis</strong> of school performance
+                            </div>
+                            <div class="feature-item"><strong>Funding comparison</strong> vs. school outcomes</div>
+                            <div class="feature-item"><strong>GIS mapping</strong> of school locations</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="modal-body">
-                    <h2 class="modal-title"><em>California Schools Data Visualization</em></h2>
-                    <p>This project visualizes various data points related to schools in California, aiming to identify
-                        trends in student performance, funding, and demographic distributions. The data is sourced from
-                        public records and is presented through interactive charts and maps.</p>
-                    <p>Key features include:
-                    <ul>
-                        <li>Interactive dashboards built with Tableau and D3.js.</li>
-                        <li>Analysis of demographic factors affecting school performance.</li>
-                        <li>Comparison of state funding versus school outcomes.</li>
-                        <li>Use of GIS data for mapping school locations and performance metrics.</li>
-                    </ul>
-                    </p>
-                    <p>This tool is intended to assist policymakers, educational planners, and the general public in
-                        understanding the dynamics of educational success and challenges in California.</p>
-                </div>
-                <div class="modal-footer">
-                    <a href="https://github.com/leabrodyheine/California-Schools-Data-Visualization"
-                        class="btn btn-hero">Visit Page</a>
-                </div>
-            </div>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
 
-    <div id="portfolioItem4" class="modal fade" role="dialog">
+    <div id="portfolioItem4" class="modal fade project-modal" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header">
-                    <a class="close" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></a>
-                    <img class="img-res" src="img/markus-spiske-1LLh8k2_YFk-unsplash.jpg" alt="">
+                <a class="project-modal-close" data-dismiss="modal" aria-label="Close"><span
+                        class="glyphicon glyphicon-remove"></span></a>
+                <div class="project-modal-body">
+                    <div class="project-modal-sidebar">
+                        <div class="project-modal-cover">
+                            <img src="img/illustrations/vector-editor.svg" alt="">
+                        </div>
+                        <div class="project-modal-badges">
+                            <span class="project-modal-category-badge"><span class="glyphicon glyphicon-wrench"
+                                    aria-hidden="true"></span> Software Engineering</span>
+                        </div>
+                        <h2 class="project-modal-title">Java GUI</h2>
+                        <div class="project-modal-stack">
+                            <p class="project-modal-section-label">Tech Stack</p>
+                            <div class="project-modal-stack-list">
+                                <span class="tech-chip">Java Swing</span><span class="tech-chip">MVC</span><span
+                                    class="tech-chip">JUnit</span>
+                            </div>
+                        </div>
+                        <div class="project-modal-skills">
+                            <p class="project-modal-section-label">Skills Gained</p>
+                            <div class="project-modal-skills-list">
+                                <span>MD Design Pattern</span><span>Swing GUI Development</span><span>Client-Server
+                                    Sync</span><span>Unit Testing</span>
+                            </div>
+                        </div>
+                        <a href="https://code.pyret.org/editor#share=1Ti4D6ajVRIFPdH4J8cq1x_ZAIlKx0t8Y&amp;v=4d870d2"
+                            class="btn btn-hero project-modal-github-btn" target="_blank"><span
+                                class="glyphicon glyphicon-link"></span> View Project</a>
+                    </div>
+                    <div class="project-modal-content">
+                        <p>A Java Swing vector graphics editor following the Model-Delegate design pattern, supporting
+                            shape creation, transforms, and server-synced drawings.</p>
+                        <p class="project-modal-section-label">Key Features</p>
+                        <div class="project-modal-features-grid">
+                            <div class="feature-item"><strong>Shapes:</strong> lines, rectangles, ellipses, triangles,
+                                diamonds</div>
+                            <div class="feature-item"><strong>Styling:</strong> fill, border color/width, rotate &amp;
+                                scale</div>
+                            <div class="feature-item"><strong>Undo/redo</strong> history</div>
+                            <div class="feature-item"><strong>Save</strong> drawings as PNG</div>
+                            <div class="feature-item"><strong>Server sync:</strong> upload, update &amp; reconnect</div>
+                            <div class="feature-item"><strong>Shift-shortcut</strong> for square/circle</div>
+                            <div class="feature-item"><strong>Move &amp; delete</strong> via click and drag</div>
+                            <div class="feature-item"><strong>JUnit</strong> test coverage</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="modal-body">
-                    <h2 class="modal-title"><em>Java GUI</em></h2>
-                    This Java Swing application allows users to create and manipulate simple vector graphics. It follows
-                    the Model-Delegate (MD) design pattern.
-                    <p><b>Features:</b>
-                    <ul>
-                        <li><b>Shapes:</b> Supports lines, rectangles, ellipses, triangles, diamonds.</li>
-                        <li><b>Solid Fill:</b> Shapes can have a solid fill, defaulting to black, or no fill.</li>
-                        <li><b>Border Width:</b> Customizable border width.</li>
-                        <li><b>Color:</b> Separate fill and border color options.</li>
-                        <li><b>Rotate:</b> Rotate shapes by 30 degrees left or right.</li>
-                        <li><b>Undo/Redo:</b> For reverting or reapplying actions.</li>
-                        <li><b>Scale:</b> Scale shapes up or down by 10%.</li>
-                        <li><b>Square & Circle:</b> press shift to create a perfect square or circle.</li>
-                        <li><b>Delete:</b> Permanent deletion of shapes.</li>
-                        <li><b>Move:</b> Click and drag to move shapes.</li>
-                    </ul>
-
-                    <b>File Menu:</b>
-                    <ul>
-                        <li>Save: Save as PNG.</li>
-                        <li>Clear Screen: Clears all shapes.</li>
-                    </ul>
-                    <b>Server Menu:</b>
-                    <ul>
-                        <li>Reconnect to Server: Reconnect without server drawings.</li>
-                        <li>Disconnect: Disconnect from the server.</li>
-                        <li>Delete My Drawing: Delete your drawing from the server.</li>
-                        <li>Update Drawing: Update your drawing on the server.</li>
-                        <li>Upload to Server: Upload shapes to the server.</li>
-                        <li>Get Server Drawings: View all drawings on the server.</li>
-                    </ul>
-                    JUnit Testing Included
-                    </p>
-                </div>
-                <div class="modal-footer">
-                    <a href="https://code.pyret.org/editor#share=1Ti4D6ajVRIFPdH4J8cq1x_ZAIlKx0t8Y&v=4d870d2"
-                        class="btn btn-hero">Visit Page</a>
-                </div>
-            </div>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
 
-    <div id="portfolioItem5" class="modal fade" role="dialog">
+    <div id="portfolioItem5" class="modal fade project-modal" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header">
-                    <a class="close" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></a>
-                    <img class="img-res" src="img/piotr-makowski-27LH_0jXKYI-unsplash.jpg" alt="">
+                <a class="project-modal-close" data-dismiss="modal" aria-label="Close"><span
+                        class="glyphicon glyphicon-remove"></span></a>
+                <div class="project-modal-body">
+                    <div class="project-modal-sidebar">
+                        <div class="project-modal-cover">
+                            <img src="img/illustrations/game-server.svg" alt="">
+                        </div>
+                        <div class="project-modal-badges">
+                            <span class="project-modal-category-badge"><span class="glyphicon glyphicon-wrench"
+                                    aria-hidden="true"></span> Software Engineering</span>
+                        </div>
+                        <h2 class="project-modal-title">Online Board Game Back-End</h2>
+                        <div class="project-modal-stack">
+                            <p class="project-modal-section-label">Tech Stack</p>
+                            <div class="project-modal-stack-list">
+                                <span class="tech-chip">Java</span><span class="tech-chip">JSON</span><span
+                                    class="tech-chip">Networking</span>
+                            </div>
+                        </div>
+                        <div class="project-modal-skills">
+                            <p class="project-modal-section-label">Skills Gained</p>
+                            <div class="project-modal-skills-list">
+                                <span>Server-Side Game Logic</span><span>Network Protocol Design</span><span>State
+                                    Management</span><span>Turn-Based Systems</span>
+                            </div>
+                        </div>
+                        <a href="https://code.pyret.org/editor#share=1VbbkIBsNz51SzyEKteoNm0Y24NiMjqtM&amp;v=4d870d2"
+                            class="btn btn-hero project-modal-github-btn" target="_blank"><span
+                                class="glyphicon glyphicon-link"></span> View Project</a>
+                    </div>
+                    <div class="project-modal-content">
+                        <p>A Java game server managing turn-based logic, player state, and networked communication for
+                            a strategy board game on a 20x20 grid.</p>
+                        <p class="project-modal-section-label">Key Features</p>
+                        <div class="project-modal-features-grid">
+                            <div class="feature-item"><strong>Turn-based</strong> movement &amp; spell-casting logic
+                            </div>
+                            <div class="feature-item"><strong>JSON</strong> client-server communication</div>
+                            <div class="feature-item"><strong>20x20 grid</strong> with animals, creatures &amp; spells
+                            </div>
+                            <div class="feature-item"><strong>Request handling</strong> &amp; game-state updates</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="modal-body">
-                    <h2 class="modal-title"><em>Online Board Game Back-End</em></h2>
-                    <p>This project is a server for a strategy board game, implemented in Java. It involves managing
-                        game logic and player interactions in a virtual game environment.</p>
-                    <p>
-                        <b>Features:</b>
-                    <ul>
-                        <li>Board Gameplay: Implementing game logic for board movements.</li>
-                        <li>Server Functionality: Handling player requests and game state updates.</li>
-                        <li>JSON Communication: Utilizing JSON for sending and receiving game data.</li>
-                    </ul>
-
-                    <b>Gameplay Overview:</b>
-                    <ul>
-                        <li>Objective: Guide animals across a board while avoiding mythical creatures.</li>
-                        <li>Board: 20x20 grid with various creatures and spells placed randomly on the board before any
-                            turns are taken.</li>
-                        <li>Animals: Each with unique movement abilities.</li>
-                        <li>Mythical Creatures: Stationary with different attack values.</li>
-                        <li>Spells: Provide abilities like healing or revealing adjacent creatures.</li>
-                    </ul>
-                    <b>Turns and Actions</b>
-                    <ul>
-                        <li> Players take turns moving animals and using spells.</li>
-                        <li>Animal movement and spell usage are based on specific rules.</li>
-                        <li>The game progresses through player actions, to safely navigate animals across the board.
-                        </li>
-                    </ul>
-                    </p>
-                    <p>The UI of the game was built by the professors and the concept of the game was constructed by
-                        ChatGPT and Module Professors</p>
-                </div>
-                <div class="modal-footer">
-                    <a href="https://code.pyret.org/editor#share=1VbbkIBsNz51SzyEKteoNm0Y24NiMjqtM&v=4d870d2"
-                        class="btn btn-hero">Visit Page</a>
-                </div>
-            </div>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
-    <div id="portfolioItem7" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <a class="close" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></a>
-                    <img class="img-res" src="img/maik-jonietz-_yMciiStJyY-unsplash.jpg" alt="Trivia Quiz Website">
-                </div>
-                <div class="modal-body">
-                    <h2 class="modal-title"><em>Trivia Quiz Website</em></h2>
-                    <p>This interactive web application challenges users with quizzes on various topics, featuring
-                        dynamic question generation and user authentication for tracking scores and progress.</p>
-                    <ul>
-                        <li>Development stack: JavaScript, HTML5, CSS3, and Node.js.</li>
-                        <li>User session management for personalized experiences.</li>
-                        <li>Real-time feedback and score tracking.</li>
-                    </ul>
-                    <p>The project aims to provide an engaging learning environment with scalable features for adding
-                        new topics and difficulty levels.</p>
-                </div>
-                <div class="modal-footer">
-                    <a href="https://github.com/leabrodyheine/Trivia-Quiz-Website" class="btn btn-hero">Visit Page</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="portfolioItem8" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <a class="close" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></a>
-                    <img class="img-res" src="img/markus-spiske-Skf7HxARcoc-unsplash.jpg"
-                        alt="ML Kaggle Cirrhosis Data">
-                </div>
-                <div class="modal-body">
-                    <h2 class="modal-title"><em>ML Kaggle Cirrhosis Data</em></h2>
-                    <p>Using machine learning to predict the progression of cirrhosis based on patient data. This
-                        project employs several advanced algorithms to forecast critical outcomes and assist in medical
-                        decision-making.</p>
-                    <ul>
-                        <li>Technologies used: Python, Jupyter Notebook, Scikit-Learn, TensorFlow.</li>
-                        <li>Data preprocessing and exploratory data analysis to understand patient demographics and
-                            disease progression.</li>
-                        <li>Model comparison to select the best predictive framework.</li>
-                    </ul>
-                    <p>Significant for its contributions to healthcare analytics, providing insights that can lead to
-                        better patient outcomes.</p>
-                </div>
-                <div class="modal-footer">
-                    <a href="https://github.com/leabrodyheine/ML-Kaggle-Cirrhosis-Data" class="btn btn-hero">Visit
-                        Page</a>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <div id="portfolioItem9" class="modal fade" role="dialog">
+    <div id="portfolioItem7" class="modal fade project-modal" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header">
-                    <a class="close" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></a>
-                    <img class="img-res" src="img/altumcode-PNbDkQ2DDgM-unsplash.jpg" alt="Mosaic Game Logical Agents">
+                <a class="project-modal-close" data-dismiss="modal" aria-label="Close"><span
+                        class="glyphicon glyphicon-remove"></span></a>
+                <div class="project-modal-body">
+                    <div class="project-modal-sidebar">
+                        <div class="project-modal-cover">
+                            <img src="img/illustrations/quiz.svg" alt="">
+                        </div>
+                        <div class="project-modal-badges">
+                            <span class="project-modal-category-badge"><span class="glyphicon glyphicon-globe"
+                                    aria-hidden="true"></span> Web Development</span>
+                        </div>
+                        <h2 class="project-modal-title">Trivia Quiz Website</h2>
+                        <div class="project-modal-stack">
+                            <p class="project-modal-section-label">Tech Stack</p>
+                            <div class="project-modal-stack-list">
+                                <span class="tech-chip">JavaScript</span><span class="tech-chip">Node.js</span><span
+                                    class="tech-chip">HTML5</span><span class="tech-chip">CSS3</span>
+                            </div>
+                        </div>
+                        <div class="project-modal-skills">
+                            <p class="project-modal-section-label">Skills Gained</p>
+                            <div class="project-modal-skills-list">
+                                <span>Session Management</span><span>Dynamic Content Rendering</span><span>Front/Back-End
+                                    Integration</span>
+                            </div>
+                        </div>
+                        <a href="https://github.com/leabrodyheine/Trivia-Quiz-Website"
+                            class="btn btn-hero project-modal-github-btn" target="_blank"><span
+                                class="glyphicon glyphicon-link"></span> View on GitHub</a>
+                    </div>
+                    <div class="project-modal-content">
+                        <p>An interactive quiz web app with dynamic question generation, user authentication, and
+                            real-time score tracking across topics and difficulty levels.</p>
+                        <p class="project-modal-section-label">Key Features</p>
+                        <div class="project-modal-features-grid">
+                            <div class="feature-item"><strong>Dynamic</strong> question generation</div>
+                            <div class="feature-item"><strong>User sessions</strong> &amp; authentication</div>
+                            <div class="feature-item"><strong>Real-time</strong> score &amp; progress tracking</div>
+                            <div class="feature-item"><strong>Expandable</strong> topics &amp; difficulty levels</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="modal-body">
-                    <h2 class="modal-title"><em>Mosaic Game Logical Agents</em></h2>
-                    <p>A game where players create beautiful mosaics using AI-driven opponents. It showcases the
-                        application of logical reasoning and AI strategy in gameplay.</p>
-                    <ul>
-                        <li>Development using Java and AI algorithms for strategic gameplay.</li>
-                        <li>Integration of AI for challenging gameplay against computer opponents.</li>
-                        <li>User interface designed for intuitive interaction and aesthetic appeal.</li>
-                    </ul>
-                    <p>This project highlights the combination of art and technology, offering a fun and intellectually
-                        stimulating environment.</p>
-                </div>
-                <div class="modal-footer">
-                    <a href="https://github.com/leabrodyheine/Mosaic-Game-Logical-Agents" class="btn btn-hero">Visit
-                        Page</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="portfolioItem10" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <a class="close" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></a>
-                    <img class="img-res" src="img/markus-spiske-iar-afB0QQw-unsplash.jpg" alt="Data Mining ML">
-                </div>
-                <div class="modal-body">
-                    <h2 class="modal-title"><em>Data Mining ML</em></h2>
-                    <p>An in-depth exploration into data mining techniques and machine learning algorithms aimed at
-                        discovering patterns and deriving actionable insights from large datasets.</p>
-                    <ul>
-                        <li>Utilization of Python, Pandas, and machine learning libraries for data analysis.</li>
-                        <li>Implementation of classification, regression, and clustering techniques.</li>
-                        <li>Visualization of data insights using Matplotlib and Seaborn.</li>
-                    </ul>
-                    <p>This project provides critical insights that can be leveraged in various sectors, including
-                        finance, healthcare, and marketing.</p>
-                </div>
-                <div class="modal-footer">
-                    <a href="https://github.com/leabrodyheine/Water-Pump-Status-Prediction" class="btn btn-hero">Visit Page</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
+
+    <div id="portfolioItem8" class="modal fade project-modal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <a class="project-modal-close" data-dismiss="modal" aria-label="Close"><span
+                        class="glyphicon glyphicon-remove"></span></a>
+                <div class="project-modal-body">
+                    <div class="project-modal-sidebar">
+                        <div class="project-modal-cover">
+                            <img src="img/illustrations/medical-ml.svg" alt="">
+                        </div>
+                        <div class="project-modal-badges">
+                            <span class="project-modal-category-badge"><span class="glyphicon glyphicon-stats"
+                                    aria-hidden="true"></span> Data Science &amp; ML</span>
+                        </div>
+                        <h2 class="project-modal-title">ML Kaggle Cirrhosis Data</h2>
+                        <div class="project-modal-stack">
+                            <p class="project-modal-section-label">Tech Stack</p>
+                            <div class="project-modal-stack-list">
+                                <span class="tech-chip">Python</span><span class="tech-chip">Scikit-Learn</span><span
+                                    class="tech-chip">TensorFlow</span>
+                            </div>
+                        </div>
+                        <div class="project-modal-skills">
+                            <p class="project-modal-section-label">Skills Gained</p>
+                            <div class="project-modal-skills-list">
+                                <span>Predictive Modeling</span><span>Model Evaluation</span><span>Healthcare Data
+                                    Analysis</span>
+                            </div>
+                        </div>
+                        <a href="https://github.com/leabrodyheine/ML-Kaggle-Cirrhosis-Data"
+                            class="btn btn-hero project-modal-github-btn" target="_blank"><span
+                                class="glyphicon glyphicon-link"></span> View on GitHub</a>
+                    </div>
+                    <div class="project-modal-content">
+                        <p>Machine learning models predicting cirrhosis progression from patient data, comparing
+                            algorithms to support clinical decision-making.</p>
+                        <p class="project-modal-section-label">Key Features</p>
+                        <div class="project-modal-features-grid">
+                            <div class="feature-item"><strong>Preprocessing</strong> &amp; exploratory data analysis
+                            </div>
+                            <div class="feature-item"><strong>Model comparison</strong> &amp; selection</div>
+                            <div class="feature-item"><strong>Predictive modeling</strong> of disease progression
+                            </div>
+                            <div class="feature-item"><strong>Healthcare</strong> analytics insights</div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <div id="portfolioItem9" class="modal fade project-modal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <a class="project-modal-close" data-dismiss="modal" aria-label="Close"><span
+                        class="glyphicon glyphicon-remove"></span></a>
+                <div class="project-modal-body">
+                    <div class="project-modal-sidebar">
+                        <div class="project-modal-cover">
+                            <img src="img/illustrations/mosaic-agents.svg" alt="">
+                        </div>
+                        <div class="project-modal-badges">
+                            <span class="project-modal-category-badge"><span class="glyphicon glyphicon-random"
+                                    aria-hidden="true"></span> Algorithms &amp; AI</span>
+                        </div>
+                        <h2 class="project-modal-title">Mosaic Game Logical Agents</h2>
+                        <div class="project-modal-stack">
+                            <p class="project-modal-section-label">Tech Stack</p>
+                            <div class="project-modal-stack-list">
+                                <span class="tech-chip">Java</span><span class="tech-chip">AI Agents</span><span
+                                    class="tech-chip">Game Theory</span>
+                            </div>
+                        </div>
+                        <div class="project-modal-skills">
+                            <p class="project-modal-section-label">Skills Gained</p>
+                            <div class="project-modal-skills-list">
+                                <span>AI Agent Design</span><span>Game Theory</span><span>Strategic Algorithm
+                                    Design</span>
+                            </div>
+                        </div>
+                        <a href="https://github.com/leabrodyheine/Mosaic-Game-Logical-Agents"
+                            class="btn btn-hero project-modal-github-btn" target="_blank"><span
+                                class="glyphicon glyphicon-link"></span> View on GitHub</a>
+                    </div>
+                    <div class="project-modal-content">
+                        <p>A mosaic-building game featuring AI-driven opponents that apply logical reasoning and
+                            game-theoretic strategy against the player.</p>
+                        <p class="project-modal-section-label">Key Features</p>
+                        <div class="project-modal-features-grid">
+                            <div class="feature-item"><strong>AI opponent</strong> strategy &amp; decision logic</div>
+                            <div class="feature-item"><strong>Logical reasoning</strong> agent design</div>
+                            <div class="feature-item"><strong>Intuitive UI</strong> for gameplay</div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <div id="portfolioItem10" class="modal fade project-modal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <a class="project-modal-close" data-dismiss="modal" aria-label="Close"><span
+                        class="glyphicon glyphicon-remove"></span></a>
+                <div class="project-modal-body">
+                    <div class="project-modal-sidebar">
+                        <div class="project-modal-cover">
+                            <img src="img/illustrations/data-mining.svg" alt="">
+                        </div>
+                        <div class="project-modal-badges">
+                            <span class="project-modal-category-badge"><span class="glyphicon glyphicon-stats"
+                                    aria-hidden="true"></span> Data Science &amp; ML</span>
+                        </div>
+                        <h2 class="project-modal-title">Data Mining ML</h2>
+                        <div class="project-modal-stack">
+                            <p class="project-modal-section-label">Tech Stack</p>
+                            <div class="project-modal-stack-list">
+                                <span class="tech-chip">Python</span><span class="tech-chip">Pandas</span><span
+                                    class="tech-chip">Matplotlib</span>
+                            </div>
+                        </div>
+                        <div class="project-modal-skills">
+                            <p class="project-modal-section-label">Skills Gained</p>
+                            <div class="project-modal-skills-list">
+                                <span>Data Mining</span><span>Feature Engineering</span><span>Unsupervised
+                                    Learning</span><span>Data Visualization</span>
+                            </div>
+                        </div>
+                        <a href="https://github.com/leabrodyheine/Water-Pump-Status-Prediction"
+                            class="btn btn-hero project-modal-github-btn" target="_blank"><span
+                                class="glyphicon glyphicon-link"></span> View on GitHub</a>
+                    </div>
+                    <div class="project-modal-content">
+                        <p>A data mining and machine learning pipeline uncovering patterns in large datasets through
+                            classification, regression, and clustering.</p>
+                        <p class="project-modal-section-label">Key Features</p>
+                        <div class="project-modal-features-grid">
+                            <div class="feature-item"><strong>Classification, regression &amp; clustering</strong> models
+                            </div>
+                            <div class="feature-item"><strong>Data cleaning</strong> &amp; feature engineering with
+                                Pandas</div>
+                            <div class="feature-item"><strong>Visualization</strong> with Matplotlib &amp; Seaborn</div>
+                            <div class="feature-item"><strong>Cross-sector</strong> applicability</div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <div id="portfolioItem11" class="modal fade project-modal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <a class="project-modal-close" data-dismiss="modal" aria-label="Close"><span
+                        class="glyphicon glyphicon-remove"></span></a>
+                <div class="project-modal-body">
+                    <div class="project-modal-sidebar">
+                        <div class="project-modal-cover">
+                            <img src="img/illustrations/molecule-binding.svg" alt="">
+                        </div>
+                        <div class="project-modal-badges">
+                            <span class="project-modal-category-badge"><span class="glyphicon glyphicon-stats"
+                                    aria-hidden="true"></span> Data Science &amp; ML</span>
+                            <span class="project-modal-wip-badge">WIP</span>
+                        </div>
+                        <h2 class="project-modal-title">KIT Inhibitor Binding Prediction</h2>
+                        <div class="project-modal-stack">
+                            <p class="project-modal-section-label">Tech Stack</p>
+                            <div class="project-modal-stack-list">
+                                <span class="tech-chip">Python</span><span class="tech-chip">RDKit</span><span
+                                    class="tech-chip">ChemBERTa</span><span class="tech-chip">XGBoost</span>
+                            </div>
+                        </div>
+                        <div class="project-modal-skills">
+                            <p class="project-modal-section-label">Skills Gained</p>
+                            <div class="project-modal-skills-list">
+                                <span>Cheminformatics</span><span>Molecular ML Featurization</span><span>Drug-Discovery
+                                    Modeling</span>
+                            </div>
+                        </div>
+                        <a href="https://github.com/leabrodyheine/kit-inhibitor-binding-prediction"
+                            class="btn btn-hero project-modal-github-btn" target="_blank"><span
+                                class="glyphicon glyphicon-link"></span> View on GitHub</a>
+                    </div>
+                    <div class="project-modal-content">
+                        <p>A work-in-progress machine learning project predicting small-molecule binding affinity
+                            against the KIT kinase receptor, distinguishing mutant (D816V) vs. wild-type selectivity
+                            to support drug discovery for systemic mastocytosis.</p>
+                        <p class="project-modal-section-label">Key Features</p>
+                        <div class="project-modal-features-grid">
+                            <div class="feature-item"><strong>ChEMBL &amp; PDB</strong> bioactivity/structural data</div>
+                            <div class="feature-item"><strong>Featurization</strong> with RDKit &amp; ChemBERTa</div>
+                            <div class="feature-item"><strong>Selectivity modeling</strong> for mutant vs. wild-type
+                            </div>
+                            <div class="feature-item"><strong>XGBoost</strong> prediction models</div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

@@ -159,6 +159,40 @@ $(function () {
         openPortfolioCardModal($(this));
     });
 
+    // Project modals: prepend a brand icon to each tech-stack chip when a
+    // matching devicon slug exists, otherwise fall back to a generic tag icon.
+    var TECH_ICON_SLUGS = {
+        'Node.js': 'nodejs',
+        'React': 'react',
+        'MongoDB': 'mongodb',
+        'JavaScript': 'javascript',
+        'Python': 'python',
+        'Java': 'java',
+        'Java Swing': 'java',
+        'HTML5': 'html5',
+        'CSS3': 'css3',
+        'D3.js': 'd3js',
+        'Scikit-Learn': 'scikitlearn',
+        'TensorFlow': 'tensorflow',
+        'Pandas': 'pandas',
+        'Matplotlib': 'matplotlib',
+        'JUnit': 'junit',
+        'JSON': 'json'
+    };
+
+    $('.tech-chip').each(function () {
+        var $chip = $(this);
+        var slug = TECH_ICON_SLUGS[$chip.text().trim()];
+        var $icon = slug
+            ? $('<img>', {
+                src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/' + slug + '/' + slug + '-original.svg',
+                alt: '',
+                class: 'tech-chip-icon'
+            })
+            : $('<span>', { class: 'glyphicon glyphicon-tag tech-chip-icon', 'aria-hidden': 'true' });
+        $chip.prepend($icon);
+    });
+
     // Dissertation section: clicking a tab shows its block and hides the others
     $(document).on('click', '.dissertation-tab', function (event) {
         event.preventDefault();

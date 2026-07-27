@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240">
+  <rect width="400" height="240" fill="#eef3f9"/>
+  <g>
+    <!-- 5x4 mosaic tile grid -->
+    <rect x="120" y="30" width="30" height="30" fill="#5b7a9d"/>
+    <rect x="150" y="30" width="30" height="30" fill="#c3d2e2"/>
+    <rect x="180" y="30" width="30" height="30" fill="#9aa7b5"/>
+    <rect x="210" y="30" width="30" height="30" fill="#5b7a9d"/>
+    <rect x="240" y="30" width="30" height="30" fill="#c3d2e2"/>
+
+    <rect x="120" y="60" width="30" height="30" fill="#9aa7b5"/>
+    <rect x="150" y="60" width="30" height="30" fill="#5b7a9d"/>
+    <rect x="180" y="60" width="30" height="30" fill="#c3d2e2"/>
+    <rect x="210" y="60" width="30" height="30" fill="#9aa7b5"/>
+    <rect x="240" y="60" width="30" height="30" fill="#5b7a9d"/>
+
+    <rect x="120" y="90" width="30" height="30" fill="#c3d2e2"/>
+    <rect x="150" y="90" width="30" height="30" fill="#9aa7b5"/>
+    <rect x="180" y="90" width="30" height="30" fill="#5b7a9d"/>
+    <rect x="210" y="90" width="30" height="30" fill="#c3d2e2"/>
+    <rect x="240" y="90" width="30" height="30" fill="#9aa7b5"/>
+
+    <rect x="120" y="120" width="30" height="30" fill="#5b7a9d"/>
+    <rect x="150" y="120" width="30" height="30" fill="#c3d2e2"/>
+    <rect x="180" y="120" width="30" height="30" fill="#9aa7b5"/>
+    <rect x="210" y="120" width="30" height="30" fill="#5b7a9d"/>
+    <rect x="240" y="120" width="30" height="30" fill="#c3d2e2"/>
+  </g>
+  <rect x="119" y="29" width="152" height="122" fill="none" stroke="#fff" stroke-width="2"/>
+
+  <!-- Agent 1 (left) -->
+  <g transform="translate(55,90)">
+    <circle r="26" fill="#fff" stroke="#7D7D7D" stroke-width="2"/>
+    <circle cx="-8" cy="-4" r="3" fill="#212121"/>
+    <circle cx="8" cy="-4" r="3" fill="#212121"/>
+    <line x1="0" y1="-26" x2="0" y2="-38" stroke="#7D7D7D" stroke-width="2"/>
+    <circle cx="0" cy="-40" r="4" fill="#7D7D7D"/>
+  </g>
+
+  <!-- Agent 2 (right) -->
+  <g transform="translate(345,90)">
+    <circle r="26" fill="#fff" stroke="#7D7D7D" stroke-width="2"/>
+    <circle cx="-8" cy="-4" r="3" fill="#212121"/>
+    <circle cx="8" cy="-4" r="3" fill="#212121"/>
+    <line x1="0" y1="-26" x2="0" y2="-38" stroke="#7D7D7D" stroke-width="2"/>
+    <circle cx="0" cy="-40" r="4" fill="#7D7D7D"/>
+  </g>
+</svg>

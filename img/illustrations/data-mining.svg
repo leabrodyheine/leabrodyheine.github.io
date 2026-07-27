@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240">
+  <rect width="400" height="240" fill="#eef3f9"/>
+  <g fill="#c3d2e2">
+    <circle cx="90" cy="35" r="5"/>
+    <circle cx="130" cy="25" r="5"/>
+    <circle cx="170" cy="40" r="5"/>
+    <circle cx="210" cy="22" r="5"/>
+    <circle cx="250" cy="38" r="5"/>
+    <circle cx="290" cy="28" r="5"/>
+    <circle cx="110" cy="55" r="5"/>
+    <circle cx="150" cy="50" r="5"/>
+    <circle cx="230" cy="52" r="5"/>
+    <circle cx="270" cy="55" r="5"/>
+  </g>
+  <polygon points="80,65 300,65 235,175 145,175" fill="#fff" stroke="#9aa7b5" stroke-width="2"/>
+  <line x1="80" y1="65" x2="300" y2="65" stroke="#9aa7b5" stroke-width="2"/>
+  <g>
+    <circle cx="150" cy="205" r="10" fill="#5b7a9d"/>
+    <circle cx="190" cy="205" r="10" fill="#7D7D7D"/>
+    <circle cx="230" cy="205" r="10" fill="#9aa7b5"/>
+  </g>
+  <line x1="190" y1="175" x2="190" y2="195" stroke="#9aa7b5" stroke-width="2"/>
+</svg>
