@@ -1347,9 +1347,10 @@ p.intro-about-me-text {
 }
 
 .section-courses {
-    padding-top: 60px;
+    padding-top: 100px;
     padding-bottom: 120px;
-    background: #ffffff;
+    background: #f7f9fc;
+    box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.04);
     text-align: center;
 }
 
