@@ -422,8 +422,8 @@ body {
 }
 
 .portfolio-filter.active {
-    background-color: #212121;
-    border-color: #212121;
+    background-color: #7D7D7D;
+    border-color: #7D7D7D;
     color: #fff;
 }
 
@@ -593,10 +593,25 @@ body {
    of a single narrow stacked column with a tall hero photo -- the old layout
    forced almost every project to scroll. Each column scrolls independently
    if its content is unusually long, so the underlying page never needs to. */
+.project-modal {
+    text-align: center;
+}
+
+.project-modal:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -4px;
+}
+
 .project-modal .modal-dialog {
+    display: inline-block;
     width: 92%;
     max-width: 920px;
     margin: 40px auto;
+    text-align: left;
+    vertical-align: middle;
 }
 
 .project-modal-close {
@@ -611,7 +626,7 @@ body {
     justify-content: center;
     background-color: #fff;
     border-radius: 50%;
-    color: #212121;
+    color: #7D7D7D;
     font-size: 13px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
     transition: box-shadow 0.25s ease-in-out;
@@ -687,7 +702,7 @@ body {
 .project-modal-title {
     font-size: 22px;
     font-weight: 700;
-    color: #212121;
+    color: #7D7D7D;
     margin: 0 0 20px;
     line-height: 1.25;
 }
@@ -759,7 +774,7 @@ body {
 
 .project-modal-content {
     flex: 1 1 auto;
-    padding: 34px 34px 30px 30px;
+    padding: 46px 40px 40px 38px;
     overflow-y: auto;
 }
 
@@ -767,7 +782,7 @@ body {
     font-size: 14px;
     line-height: 1.7;
     color: #7D7D7D;
-    margin-bottom: 20px;
+    margin-bottom: 26px;
 }
 
 .project-modal-features-grid {
@@ -782,7 +797,7 @@ body {
     line-height: 1.6;
     color: #7D7D7D;
     padding-left: 16px;
-    margin-bottom: 10px;
+    margin-bottom: 14px;
 }
 
 .project-modal-features-grid .feature-item::before {
@@ -793,7 +808,8 @@ body {
 }
 
 .project-modal-features-grid .feature-item strong {
-    color: #212121;
+    color: #7D7D7D;
+    font-weight: 700;
 }
 
 @media only screen and (max-width: 767px) {
