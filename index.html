@@ -701,12 +701,11 @@
                             <div class="portfolio-card-header">
                                 <span class="glyphicon glyphicon-stats portfolio-card-icon" aria-hidden="true"></span>
                                 <span class="portfolio-card-category">Data Science &amp; ML</span>
-                                <span class="portfolio-wip-badge">WIP</span>
                             </div>
                             <div class="portfolio-card-body">
                                 <h4>KIT Inhibitor Binding Prediction</h4>
-                                <p>ML pipeline predicting small-molecule binding affinity and mutant selectivity
-                                    against the KIT kinase receptor.</p>
+                                <p>ML pipeline predicting small-molecule binding affinity and mutant (D816V) vs.
+                                    wild-type selectivity against the KIT kinase receptor.</p>
                                 <div class="portfolio-card-footer">
                                     <div class="portfolio-tags">
                                         <span>Python</span><span>RDKit</span><span>XGBoost</span>
@@ -1687,14 +1686,14 @@
                         <div class="project-modal-badges">
                             <span class="project-modal-category-badge"><span class="glyphicon glyphicon-stats"
                                     aria-hidden="true"></span> Data Science &amp; ML</span>
-                            <span class="project-modal-wip-badge">WIP</span>
                         </div>
                         <h2 class="project-modal-title">KIT Inhibitor Binding Prediction</h2>
                         <div class="project-modal-stack">
                             <p class="project-modal-section-label">Tech Stack</p>
                             <div class="project-modal-stack-list">
                                 <span class="tech-chip">Python</span><span class="tech-chip">RDKit</span><span
-                                    class="tech-chip">ChemBERTa</span><span class="tech-chip">XGBoost</span>
+                                    class="tech-chip">ChemBERTa</span><span class="tech-chip">XGBoost</span><span
+                                    class="tech-chip">scikit-learn</span>
                             </div>
                         </div>
                         <div class="project-modal-skills">
@@ -1709,10 +1708,11 @@
                                 class="glyphicon glyphicon-link"></span> View on GitHub</a>
                     </div>
                     <div class="project-modal-content">
-                        <p>A work-in-progress project predicting small-molecule binding affinity against the KIT
-                            kinase receptor and exploring mutant (D816V) vs. wild-type selectivity — the key
-                            therapeutic distinction between systemic mastocytosis (needs mutant-selective inhibitors)
-                            and other mast cell diseases (needs wild-type suppression).</p>
+                        <p>An ML pipeline predicting small-molecule binding affinity against the KIT kinase receptor
+                            and exploring mutant (D816V) vs. wild-type selectivity — the key therapeutic distinction
+                            between systemic mastocytosis (needs mutant-selective inhibitors) and other mast cell
+                            diseases (needs wild-type suppression). Extends the mast cell disease research from my
+                            MSc dissertation into the underlying drug-target mechanism.</p>
                         <p class="project-modal-section-label">Key Features</p>
                         <div class="project-modal-features-grid">
                             <div class="feature-item"><strong>ChEMBL data</strong>: SMILES & IC50/Ki bioactivity
@@ -1721,9 +1721,28 @@
                             <div class="feature-item"><strong>Featurization</strong>: RDKit descriptors + ChemBERTa
                                 embeddings</div>
                             <div class="feature-item"><strong>Gradient-boosted trees / MLP</strong> for affinity
-                                prediction</div>
+                                prediction, scaffold-split to avoid leakage</div>
                             <div class="feature-item"><strong>Literature-derived</strong> WT vs. D816V selectivity
                                 set</div>
+                            <div class="feature-item"><strong>Structural sanity check</strong> against 9 PDB
+                                complexes</div>
+                        </div>
+                        <p class="project-modal-section-label">Results</p>
+                        <div class="project-modal-features-grid">
+                            <div class="feature-item"><strong>5,565 cleaned</strong> ChEMBL bioactivity records from
+                                8,703 raw pulls, scaffold-split 4,452/1,113 train/test</div>
+                            <div class="feature-item"><strong>Best model</strong>: weighted XGBoost + ChemBERTa-MLP
+                                ensemble — RMSE 0.820, R² 0.552, Spearman ρ 0.721</div>
+                            <div class="feature-item"><strong>Beats baseline</strong>: naive mean-baseline RMSE 1.233;
+                                improvement bootstrap-validated across 1,000 resamples</div>
+                            <div class="feature-item"><strong>Selectivity anchors correct</strong>: model predicts
+                                imatinib as WT-selective (3.93×) and dasatinib as near-equipotent (1.37×), matching
+                                known pharmacology</div>
+                            <div class="feature-item"><strong>925 paired compounds</strong> analyzed for WT vs. D816V
+                                selectivity: 40.3% WT-favoring, 27.3% D816V-favoring, 32.3% comparable</div>
+                            <div class="feature-item"><strong>Structural check</strong>: residue 816 confirmed in all
+                                9 PDB structures; top predicted compounds sit within expected range of the
+                                ATP-binding pocket</div>
                         </div>
                     </div>
                 </div>
