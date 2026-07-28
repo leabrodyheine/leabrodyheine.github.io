@@ -1709,40 +1709,30 @@
                     </div>
                     <div class="project-modal-content">
                         <p>An ML pipeline predicting small-molecule binding affinity against the KIT kinase receptor
-                            and exploring mutant (D816V) vs. wild-type selectivity — the key therapeutic distinction
-                            between systemic mastocytosis (needs mutant-selective inhibitors) and other mast cell
-                            diseases (needs wild-type suppression). Extends the mast cell disease research from my
-                            MSc dissertation into the underlying drug-target mechanism.</p>
+                            and mutant (D816V) vs. wild-type selectivity — the distinction between inhibitors for
+                            systemic mastocytosis and wild-type suppression for other mast cell diseases. Extends the
+                            mast cell disease research from my MSc dissertation.</p>
                         <p class="project-modal-section-label">Key Features</p>
                         <div class="project-modal-features-grid">
-                            <div class="feature-item"><strong>ChEMBL data</strong>: SMILES & IC50/Ki bioactivity
-                            </div>
-                            <div class="feature-item"><strong>PDB structures</strong> of wild-type & D816V KIT</div>
+                            <div class="feature-item"><strong>ChEMBL + PDB data</strong>: SMILES/IC50-Ki bioactivity
+                                and wild-type & D816V KIT structures</div>
                             <div class="feature-item"><strong>Featurization</strong>: RDKit descriptors + ChemBERTa
                                 embeddings</div>
-                            <div class="feature-item"><strong>Gradient-boosted trees / MLP</strong> for affinity
-                                prediction, scaffold-split to avoid leakage</div>
+                            <div class="feature-item"><strong>XGBoost & MLP models</strong>, scaffold-split to avoid
+                                leakage</div>
                             <div class="feature-item"><strong>Literature-derived</strong> WT vs. D816V selectivity
                                 set</div>
-                            <div class="feature-item"><strong>Structural sanity check</strong> against 9 PDB
-                                complexes</div>
                         </div>
                         <p class="project-modal-section-label">Results</p>
                         <div class="project-modal-features-grid">
-                            <div class="feature-item"><strong>5,565 cleaned</strong> ChEMBL bioactivity records from
-                                8,703 raw pulls, scaffold-split 4,452/1,113 train/test</div>
-                            <div class="feature-item"><strong>Best model</strong>: weighted XGBoost + ChemBERTa-MLP
-                                ensemble — RMSE 0.820, R² 0.552, Spearman ρ 0.721</div>
-                            <div class="feature-item"><strong>Beats baseline</strong>: naive mean-baseline RMSE 1.233;
-                                improvement bootstrap-validated across 1,000 resamples</div>
-                            <div class="feature-item"><strong>Selectivity anchors correct</strong>: model predicts
-                                imatinib as WT-selective (3.93×) and dasatinib as near-equipotent (1.37×), matching
-                                known pharmacology</div>
-                            <div class="feature-item"><strong>925 paired compounds</strong> analyzed for WT vs. D816V
-                                selectivity: 40.3% WT-favoring, 27.3% D816V-favoring, 32.3% comparable</div>
-                            <div class="feature-item"><strong>Structural check</strong>: residue 816 confirmed in all
-                                9 PDB structures; top predicted compounds sit within expected range of the
-                                ATP-binding pocket</div>
+                            <div class="feature-item"><strong>Best model</strong> (XGBoost + ChemBERTa-MLP
+                                ensemble): RMSE 0.820, R² 0.552, ρ 0.721 — beats 1.233 baseline</div>
+                            <div class="feature-item"><strong>Selectivity anchors correct</strong>: imatinib
+                                WT-selective (3.93×), dasatinib near-equipotent (1.37×)</div>
+                            <div class="feature-item"><strong>925 paired compounds</strong>: 40.3% WT-favoring, 27.3%
+                                D816V-favoring, 32.3% comparable</div>
+                            <div class="feature-item"><strong>Structural check</strong>: residue 816 confirmed in
+                                all 9 PDB structures, matching expected pocket geometry</div>
                         </div>
                     </div>
                 </div>
