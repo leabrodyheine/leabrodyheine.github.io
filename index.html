@@ -944,6 +944,32 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="col-md-4 col-sm-6 portfolio-col" data-category="algo">
+                        <div class="portfolio-card" data-modal-target="#portfolioItem12" role="button" tabindex="0"
+                            aria-label="View details for Agentic CI/CD Failure Triage System">
+                            <div class="portfolio-card-header">
+                                <span class="glyphicon glyphicon-random portfolio-card-icon" aria-hidden="true"></span>
+                                <span class="portfolio-card-category">Algorithms &amp; AI</span>
+                                <span class="portfolio-wip-badge">WIP</span>
+                            </div>
+                            <div class="portfolio-card-body">
+                                <h4>Agentic CI/CD Failure Triage System</h4>
+                                <p>Autonomous agent that classifies failed GitHub Actions runs, hypothesizes a root
+                                    cause with cited log evidence, and files a structured, auditable issue.</p>
+                                <div class="portfolio-card-footer">
+                                    <div class="portfolio-tags">
+                                        <span>Python</span><span>Claude API</span><span>GitHub Actions</span>
+                                    </div>
+                                    <div class="portfolio-card-links">
+                                        <a href="https://github.com/leabrodyheine/Agentic-CI-CD-Failure-Triage-System"
+                                            aria-label="View source on GitHub"><span
+                                                class="glyphicon glyphicon-link"></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section><!-- /.secton-portfolio -->
@@ -1733,6 +1759,68 @@
                                 D816V-favoring, 32.3% comparable</div>
                             <div class="feature-item"><strong>Structural check</strong>: residue 816 confirmed in
                                 all 9 PDB structures, matching expected pocket geometry</div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <div id="portfolioItem12" class="modal fade project-modal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <a class="project-modal-close" data-dismiss="modal" aria-label="Close"><span
+                        class="glyphicon glyphicon-remove"></span></a>
+                <div class="project-modal-body">
+                    <div class="project-modal-sidebar">
+                        <div class="project-modal-cover">
+                            <img src="img/illustrations/ci-triage.svg" alt="">
+                        </div>
+                        <div class="project-modal-badges">
+                            <span class="project-modal-category-badge"><span class="glyphicon glyphicon-random"
+                                    aria-hidden="true"></span> Algorithms &amp; AI</span>
+                            <span class="project-modal-wip-badge">WIP</span>
+                        </div>
+                        <h2 class="project-modal-title">Agentic CI/CD Failure Triage System</h2>
+                        <div class="project-modal-stack">
+                            <p class="project-modal-section-label">Tech Stack</p>
+                            <div class="project-modal-stack-list">
+                                <span class="tech-chip">Python</span><span class="tech-chip">Claude API</span><span
+                                    class="tech-chip">GitHub Actions API</span><span
+                                    class="tech-chip">SQLite</span>
+                            </div>
+                        </div>
+                        <div class="project-modal-skills">
+                            <p class="project-modal-section-label">Skills Gained</p>
+                            <div class="project-modal-skills-list">
+                                <span>Agentic Systems Design</span><span>LLM Tool Use</span><span>CI/CD
+                                    Observability</span><span>Eval-Driven Development</span>
+                            </div>
+                        </div>
+                        <a href="https://github.com/leabrodyheine/Agentic-CI-CD-Failure-Triage-System"
+                            class="btn btn-hero project-modal-github-btn" target="_blank"><span
+                                class="glyphicon glyphicon-link"></span> View on GitHub</a>
+                    </div>
+                    <div class="project-modal-content">
+                        <p>A work-in-progress autonomous agent that watches a GitHub Actions repo for failed runs,
+                            classifies each failure (flake / regression / infra issue / new bug) with Claude,
+                            generates a root-cause hypothesis backed by cited log evidence, and files a structured
+                            GitHub issue with a confidence score — with every decision recorded in an auditable
+                            SQLite log.</p>
+                        <p class="project-modal-section-label">Key Features</p>
+                        <div class="project-modal-features-grid">
+                            <div class="feature-item"><strong>Continuous polling</strong> of GitHub Actions runs,
+                                or a one-shot cron/CI mode</div>
+                            <div class="feature-item"><strong>Claude-driven classification</strong>: flake,
+                                regression, infra issue, or new bug</div>
+                            <div class="feature-item"><strong>Root-cause hypotheses</strong> grounded in cited log
+                                excerpts, with a confidence score</div>
+                            <div class="feature-item"><strong>Auto-filed GitHub issues</strong> with reproducible
+                                steps and suspected commit/PR</div>
+                            <div class="feature-item"><strong>Auditable SQLite log</strong> of every agent
+                                decision</div>
+                            <div class="feature-item"><strong>Labeled eval set</strong> scoring classifier accuracy
+                                against real historical failures</div>
                         </div>
                     </div>
                 </div>
