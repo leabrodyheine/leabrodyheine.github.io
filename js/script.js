@@ -179,19 +179,34 @@ $(function () {
         'Scikit-Learn': 'scikitlearn',
         'Pandas': 'pandas',
         'JUnit': 'junit',
-        'JSON': 'json'
+        'JSON': 'json',
+        'GitHub Actions': 'githubactions',
+        'GitHub Actions API': 'githubactions',
+        'SQLite': 'sqlite'
+    };
+
+    // Brands with no devicon entry -- served from a local logo instead of the devicon CDN.
+    var TECH_ICON_OVERRIDES = {
+        'Claude API': 'img/logos/Claude.svg'
     };
 
     $('.tech-chip').each(function () {
         var $chip = $(this);
-        var slug = TECH_ICON_SLUGS[$chip.text().trim()];
-        var $icon = slug
-            ? $('<img>', {
+        var text = $chip.text().trim();
+        var override = TECH_ICON_OVERRIDES[text];
+        var slug = TECH_ICON_SLUGS[text];
+        var $icon;
+        if (override) {
+            $icon = $('<img>', { src: override, alt: '', class: 'tech-chip-icon' });
+        } else if (slug) {
+            $icon = $('<img>', {
                 src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/' + slug + '/' + slug + '-original.svg',
                 alt: '',
                 class: 'tech-chip-icon'
-            })
-            : $('<span>', { class: 'glyphicon glyphicon-cog tech-chip-icon', 'aria-hidden': 'true' });
+            });
+        } else {
+            $icon = $('<span>', { class: 'glyphicon glyphicon-cog tech-chip-icon', 'aria-hidden': 'true' });
+        }
         $chip.prepend($icon);
     });
 
