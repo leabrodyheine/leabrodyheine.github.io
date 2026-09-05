@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240">
+  <rect width="400" height="240" fill="#eef3f9"/>
+
+  <!-- user query bubble -->
+  <g transform="translate(30,40)">
+    <rect width="90" height="46" rx="10" fill="#fff" stroke="#5b7a9d" stroke-width="2"/>
+    <line x1="14" y1="16" x2="76" y2="16" stroke="#c3d2e2" stroke-width="4" stroke-linecap="round"/>
+    <line x1="14" y1="30" x2="52" y2="30" stroke="#c3d2e2" stroke-width="4" stroke-linecap="round"/>
+    <path d="M18,46 l0,12 l14,-12" fill="#fff" stroke="#5b7a9d" stroke-width="2" stroke-linejoin="round"/>
+  </g>
+
+  <!-- arrow to agent -->
+  <line x1="122" y1="63" x2="158" y2="63" stroke="#9aa7b5" stroke-width="2.5"/>
+  <path d="M151,56 l10,7 l-10,7" fill="none" stroke="#9aa7b5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- agent -->
+  <g transform="translate(190,63)">
+    <circle r="28" fill="#fff" stroke="#7D7D7D" stroke-width="2"/>
+    <circle cx="-9" cy="-4" r="3" fill="#212121"/>
+    <circle cx="9" cy="-4" r="3" fill="#212121"/>
+    <path d="M-10,9 q10,8 20,0" fill="none" stroke="#212121" stroke-width="2" stroke-linecap="round"/>
+    <line x1="0" y1="-28" x2="0" y2="-40" stroke="#7D7D7D" stroke-width="2"/>
+    <circle cx="0" cy="-42" r="4" fill="#7D7D7D"/>
+  </g>
+
+  <!-- retrieval loop arrow -->
+  <path d="M190,95 q-46,26 -2,44" fill="none" stroke="#9aa7b5" stroke-width="2.5" stroke-dasharray="5 5"/>
+  <path d="M181,133 l8,8 l6,-10" fill="none" stroke="#9aa7b5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- vector store -->
+  <g transform="translate(150,150)">
+    <ellipse cx="30" cy="10" rx="30" ry="9" fill="#fff" stroke="#5b7a9d" stroke-width="2"/>
+    <path d="M0,10 v34 a30,9 0 0 0 60,0 v-34" fill="#fff" stroke="#5b7a9d" stroke-width="2"/>
+    <path d="M0,27 a30,9 0 0 0 60,0" fill="none" stroke="#c3d2e2" stroke-width="2"/>
+  </g>
+
+  <!-- arrow to inference -->
+  <line x1="222" y1="63" x2="262" y2="63" stroke="#9aa7b5" stroke-width="2.5"/>
+  <path d="M255,56 l10,7 l-10,7" fill="none" stroke="#9aa7b5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- inference GPU box -->
+  <g transform="translate(268,38)">
+    <rect width="100" height="50" rx="8" fill="#fff" stroke="#5b7a9d" stroke-width="2"/>
+    <rect x="14" y="14" width="72" height="22" rx="4" fill="#dbe6f2"/>
+    <line x1="24" y1="6" x2="24" y2="0" stroke="#5b7a9d" stroke-width="2"/>
+    <line x1="50" y1="6" x2="50" y2="0" stroke="#5b7a9d" stroke-width="2"/>
+    <line x1="76" y1="6" x2="76" y2="0" stroke="#5b7a9d" stroke-width="2"/>
+    <line x1="24" y1="56" x2="24" y2="50" stroke="#5b7a9d" stroke-width="2"/>
+    <line x1="50" y1="56" x2="50" y2="50" stroke="#5b7a9d" stroke-width="2"/>
+    <line x1="76" y1="56" x2="76" y2="50" stroke="#5b7a9d" stroke-width="2"/>
+  </g>
+
+  <!-- metrics gauge -->
+  <g transform="translate(300,120)">
+    <path d="M0,60 a60,60 0 0 1 120,0" fill="none" stroke="#c3d2e2" stroke-width="10" stroke-linecap="round"/>
+    <path d="M0,60 a60,60 0 0 1 84,-42" fill="none" stroke="#5b7a9d" stroke-width="10" stroke-linecap="round"/>
+    <line x1="60" y1="60" x2="88" y2="34" stroke="#212121" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="60" cy="60" r="5" fill="#212121"/>
+  </g>
+</svg>

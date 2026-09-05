@@ -182,7 +182,14 @@ $(function () {
         'JSON': 'json',
         'GitHub Actions': 'githubactions',
         'GitHub Actions API': 'githubactions',
-        'SQLite': 'sqlite'
+        'SQLite': 'sqlite',
+        'FastAPI': 'fastapi',
+        'React': 'react',
+        'Redis': 'redis',
+        'Kubernetes': 'kubernetes',
+        'Prometheus': 'prometheus',
+        'Swift': 'swift',
+        'SwiftUI': 'swift'
     };
 
     // Brands with no devicon entry -- served from a local logo instead of the devicon CDN.

@@ -757,6 +757,60 @@
                         </div>
                     </div>
 
+                    <div class="col-md-4 col-sm-6 portfolio-col" data-category="algo">
+                        <div class="portfolio-card" data-modal-target="#portfolioItem13" role="button" tabindex="0"
+                            aria-label="View details for AI RAG Evaluation Platform">
+                            <div class="portfolio-card-header">
+                                <span class="glyphicon glyphicon-random portfolio-card-icon" aria-hidden="true"></span>
+                                <span class="portfolio-card-category">Algorithms &amp; AI</span>
+                                <span class="portfolio-wip-badge">WIP</span>
+                            </div>
+                            <div class="portfolio-card-body">
+                                <h4>AI RAG Evaluation Platform</h4>
+                                <p>Cloud-native platform that benchmarks and monitors its own RAG performance, with an
+                                    agentic interface for investigating latency, bottlenecks, and inference-stack
+                                    tradeoffs through natural-language questions.</p>
+                                <div class="portfolio-card-footer">
+                                    <div class="portfolio-tags">
+                                        <span>Python</span><span>Kubernetes</span><span>vLLM</span>
+                                    </div>
+                                    <div class="portfolio-card-links">
+                                        <a href="https://github.com/leabrodyheine/AI-RAG-Platform"
+                                            aria-label="View source on GitHub"><span
+                                                class="glyphicon glyphicon-link"></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 portfolio-col" data-category="swe">
+                        <div class="portfolio-card" data-modal-target="#portfolioItem14" role="button" tabindex="0"
+                            aria-label="View details for Desktop Notifications">
+                            <div class="portfolio-card-header">
+                                <span class="glyphicon glyphicon-wrench portfolio-card-icon" aria-hidden="true"></span>
+                                <span class="portfolio-card-category">Software Engineering</span>
+                                <span class="portfolio-wip-badge">WIP</span>
+                            </div>
+                            <div class="portfolio-card-body">
+                                <h4>Desktop Notifications</h4>
+                                <p>Native macOS desktop-pet app that reads Apple Calendar events with EventKit and sends
+                                    an illustrated pet across the screen 30 and 10 minutes before a meeting. Fully
+                                    offline, no accounts or servers.</p>
+                                <div class="portfolio-card-footer">
+                                    <div class="portfolio-tags">
+                                        <span>Swift</span><span>SwiftUI</span><span>EventKit</span>
+                                    </div>
+                                    <div class="portfolio-card-links">
+                                        <a href="https://github.com/leabrodyheine/desktop-notifications"
+                                            aria-label="View source on GitHub"><span
+                                                class="glyphicon glyphicon-link"></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="col-md-4 col-sm-6 portfolio-col" data-category="web">
                         <div class="portfolio-card" data-modal-target="#portfolioItem1" role="button" tabindex="0"
                             aria-label="View details for Full Stack Web Development">
@@ -1840,6 +1894,131 @@
                                 decision</div>
                             <div class="feature-item"><strong>Labeled eval set</strong> scoring classifier accuracy
                                 against real historical failures</div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <div id="portfolioItem13" class="modal fade project-modal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <a class="project-modal-close" data-dismiss="modal" aria-label="Close"><span
+                        class="glyphicon glyphicon-remove"></span></a>
+                <div class="project-modal-body">
+                    <div class="project-modal-sidebar">
+                        <div class="project-modal-cover">
+                            <img src="img/illustrations/rag-platform.svg" alt="">
+                        </div>
+                        <div class="project-modal-badges">
+                            <span class="project-modal-category-badge"><span class="glyphicon glyphicon-random"
+                                    aria-hidden="true"></span> Algorithms &amp; AI</span>
+                            <span class="project-modal-wip-badge">WIP</span>
+                        </div>
+                        <h2 class="project-modal-title">AI RAG Evaluation Platform</h2>
+                        <div class="project-modal-stack">
+                            <p class="project-modal-section-label">Tech Stack</p>
+                            <div class="project-modal-stack-list">
+                                <span class="tech-chip">Python</span><span class="tech-chip">FastAPI</span><span
+                                    class="tech-chip">React</span><span class="tech-chip">pgvector</span><span
+                                    class="tech-chip">Redis</span><span class="tech-chip">vLLM</span><span
+                                    class="tech-chip">Triton/TensorRT-LLM</span><span
+                                    class="tech-chip">Kubernetes</span><span class="tech-chip">Prometheus</span>
+                            </div>
+                        </div>
+                        <div class="project-modal-skills">
+                            <p class="project-modal-section-label">Skills Gained</p>
+                            <div class="project-modal-skills-list">
+                                <span>Agentic RAG Design</span><span>Distributed Systems</span><span>GPU Inference
+                                    Serving</span><span>Observability &amp; Load Testing</span>
+                            </div>
+                        </div>
+                        <a href="https://github.com/leabrodyheine/AI-RAG-Platform"
+                            class="btn btn-hero project-modal-github-btn" target="_blank"><span
+                                class="glyphicon glyphicon-link"></span> View on GitHub</a>
+                    </div>
+                    <div class="project-modal-content">
+                        <p>A work-in-progress cloud-native AI system that benchmarks and monitors its own performance,
+                            then exposes an agentic RAG interface so engineers can investigate results, find
+                            bottlenecks, and compare architectural configurations by asking natural-language
+                            questions. Built as independently packaged services on Kubernetes with full metrics and
+                            tracing.</p>
+                        <p class="project-modal-section-label">Key Features</p>
+                        <div class="project-modal-features-grid">
+                            <div class="feature-item"><strong>Agentic RAG loop</strong>: the agent decides when to
+                                retrieve, rewrites weak queries, and returns cited answers</div>
+                            <div class="feature-item"><strong>Dual inference backends</strong>: vLLM and
+                                Triton/TensorRT-LLM behind one service for head-to-head comparison</div>
+                            <div class="feature-item"><strong>Microservices on Kubernetes</strong>: gateway, agent,
+                                retrieval, and inference with probes, HPA, and GPU scheduling</div>
+                            <div class="feature-item"><strong>Quality + performance evals</strong>: correctness,
+                                citation accuracy, hallucination rate, p50/p95/p99 latency, tokens/sec</div>
+                            <div class="feature-item"><strong>Bottleneck exercise</strong>: load-test, locate the
+                                slowest stage from traces, optimize, and measure the improvement</div>
+                            <div class="feature-item"><strong>Redis caching</strong> and versioned service contracts
+                                to keep boundaries explicit</div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <div id="portfolioItem14" class="modal fade project-modal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <a class="project-modal-close" data-dismiss="modal" aria-label="Close"><span
+                        class="glyphicon glyphicon-remove"></span></a>
+                <div class="project-modal-body">
+                    <div class="project-modal-sidebar">
+                        <div class="project-modal-cover">
+                            <img src="img/illustrations/desktop-pet.svg" alt="">
+                        </div>
+                        <div class="project-modal-badges">
+                            <span class="project-modal-category-badge"><span class="glyphicon glyphicon-wrench"
+                                    aria-hidden="true"></span> Software Engineering</span>
+                            <span class="project-modal-wip-badge">WIP</span>
+                        </div>
+                        <h2 class="project-modal-title">Desktop Notifications</h2>
+                        <div class="project-modal-stack">
+                            <p class="project-modal-section-label">Tech Stack</p>
+                            <div class="project-modal-stack-list">
+                                <span class="tech-chip">Swift</span><span class="tech-chip">SwiftUI</span><span
+                                    class="tech-chip">AppKit</span><span class="tech-chip">EventKit</span><span
+                                    class="tech-chip">UserNotifications</span>
+                            </div>
+                        </div>
+                        <div class="project-modal-skills">
+                            <p class="project-modal-section-label">Skills Gained</p>
+                            <div class="project-modal-skills-list">
+                                <span>Native macOS Development</span><span>Event-Driven Scheduling</span><span>Offline-First
+                                    Design</span><span>UI Animation</span>
+                            </div>
+                        </div>
+                        <a href="https://github.com/leabrodyheine/desktop-notifications"
+                            class="btn btn-hero project-modal-github-btn" target="_blank"><span
+                                class="glyphicon glyphicon-link"></span> View on GitHub</a>
+                    </div>
+                    <div class="project-modal-content">
+                        <p>A work-in-progress native macOS desktop-pet app for personal calendar reminders. It stays
+                            hidden until an Apple Calendar event approaches, then sends an illustrated pet once across
+                            the center of the screen showing the event name and time remaining. It works entirely
+                            offline with no accounts, servers, analytics, or AI features.</p>
+                        <p class="project-modal-section-label">Key Features</p>
+                        <div class="project-modal-features-grid">
+                            <div class="feature-item"><strong>EventKit calendar access</strong>: reads selected Apple
+                                Calendar calendars, including synced Google events</div>
+                            <div class="feature-item"><strong>Configurable reminders</strong> 30 and 10 minutes before
+                                each eligible event, each occurrence shown once</div>
+                            <div class="feature-item"><strong>Floating pet animation</strong>: a transparent,
+                                non-activating AppKit window crossing the active display</div>
+                            <div class="feature-item"><strong>Click-through to Calendar</strong>: open the event, or
+                                dismiss via a hover-revealed close button</div>
+                            <div class="feature-item"><strong>Resilient scheduling</strong>: reminders restore after
+                                launch, calendar changes, sleep, or restart</div>
+                            <div class="feature-item"><strong>Menu-bar controls</strong> and a compact native settings
+                                window; no network requests at all</div>
                         </div>
                     </div>
                 </div>
