@@ -178,6 +178,8 @@ $(function () {
         'Plotly.js': 'plotly',
         'Scikit-Learn': 'scikitlearn',
         'Pandas': 'pandas',
+        'Matplotlib': 'matplotlib',
+        'pytest': 'pytest',
         'JUnit': 'junit',
         'JSON': 'json',
         'GitHub Actions': 'githubactions',
