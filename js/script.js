@@ -2,7 +2,9 @@ $(function () {
 
     $('.navbar-toggle').click(function () {
         $(this).toggleClass('act');
-        if ($(this).hasClass('act')) {
+        var isOpen = $(this).hasClass('act');
+        $(this).attr('aria-expanded', isOpen);
+        if (isOpen) {
             $('.main-menu').addClass('act');
         }
         else {
@@ -32,7 +34,7 @@ $(function () {
         $('html, body').stop().animate({
             scrollTop: $($anchor.attr('href')).offset().top - headerOffset
         }, 800, 'easeOutExpo');
-        $('.navbar-toggle').removeClass('act');
+        $('.navbar-toggle').removeClass('act').attr('aria-expanded', 'false');
         $('.main-menu').removeClass('act');
         event.preventDefault();
     });
