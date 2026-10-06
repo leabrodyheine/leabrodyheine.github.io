@@ -625,9 +625,11 @@ body {
     align-items: center;
     justify-content: center;
     background-color: #fff;
+    border: 0;
     border-radius: 50%;
     color: #7D7D7D;
     font-size: 13px;
+    padding: 0;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
     transition: box-shadow 0.25s ease-in-out;
 }
