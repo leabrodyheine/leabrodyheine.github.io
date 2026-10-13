@@ -132,8 +132,8 @@ $(function () {
     $(document).on('click', '.portfolio-filter', function () {
         var filter = $(this).data('filter');
 
-        $('.portfolio-filter').removeClass('active');
-        $(this).addClass('active');
+        $('.portfolio-filter').removeClass('active').attr('aria-pressed', 'false');
+        $(this).addClass('active').attr('aria-pressed', 'true');
 
         $('.portfolio-col').each(function () {
             var $col = $(this);
