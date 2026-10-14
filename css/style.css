@@ -1901,3 +1901,13 @@ p.intro-about-me-text {
         transform: translate(-50%)
     }
 }
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 3px solid #005fcc;
+    outline-offset: 3px;
+    box-shadow: 0 0 0 5px #fff;
+}
